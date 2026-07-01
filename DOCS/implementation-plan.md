@@ -34,7 +34,7 @@ Recruiters and hiring managers clicking your LinkedIn portfolio link. They typic
 
 ---
 
-## Site Structure (Single-Page, 8 Sections)
+## Site Structure (Single-Page, 9 Sections)
 
 The website will be a single-page design with smooth scroll navigation — ideal for a LinkedIn audience who wants a quick, cohesive story.
 
@@ -132,6 +132,24 @@ Each expertise area will have its own card with an icon, description, and key hi
 - Each card shows title, tags, and a brief summary
 - Click to expand for the full case study
 - Visual indicators showing which expertise areas each project covers
+
+---
+
+### Section 4B: Personal Projects / Skills Showcase
+**Purpose:** Prove technical skill *directly* with self-initiated work — this is where hands-on ability is visible, not just claimed. Complements Section 4 (professional case studies prove impact; personal projects prove skill).
+
+**Content needed from you (see About Me §9A):**
+- [ ] **Data Analysis (Python):** Kaggle projects with charts — EDA, regression (Boston House Prices), clustering + ARIMA (Brazil E-commerce)
+- [ ] **Automation (n8n):** a workflow with a node-graph screenshot and a description of what it automates
+- [ ] **Business Strategy:** a business case solved with a McKinsey framework (MECE, issue tree, hypothesis-driven analysis)
+- [ ] Exported chart images / screenshots / diagrams (compressed, WebP where possible)
+- [ ] Optional links to GitHub repos or Kaggle notebooks
+
+**Design approach:**
+- Card grid with discipline filter tags (Data Analysis, Automation, Business Strategy, …)
+- Each card: thumbnail visual, title, discipline tags, tools, short description
+- Click to expand for detail images and an "View notebook / workflow / case" outbound link
+- Image-heavy — lazy-load below-the-fold visuals to keep the page fast
 
 ---
 

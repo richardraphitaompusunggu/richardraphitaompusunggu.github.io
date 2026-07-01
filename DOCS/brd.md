@@ -2,7 +2,7 @@
 # Portfolio Website — Richard Raphita Ompusunggu
 
 No.: 001/BRD/PERSONAL/PORTFOLIO/07/2026   Date: 01 July 2026
-Version: 1.2   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
+Version: 1.3   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
 
 ---
 
@@ -15,6 +15,7 @@ Version: 1.2   Department: Personal Project   Prepared by: Richard Raphita Ompus
 | 1.0 | 01 July 2026 | Richard Raphita Ompusunggu | Initial draft — full BRD based on content plan and about-me questionnaire |
 | 1.1 | 01 July 2026 | Richard Raphita Ompusunggu | Added Non-Functional Requirements (§6.5); new functional reqs R-SITE-13–16 (Resume download, Analytics, Favicon/OG/404, Contact-method constraint); Open Decisions log (§9.5); resolved contact-form vs. no-backend conflict; added accessibility/spam/analytics risks and new dependencies |
 | 1.2 | 01 July 2026 | Richard Raphita Ompusunggu | Achievement metrics for all 5 expertise areas received (about-me §4–8); updated dependency status, assumptions, roadmap, and next steps accordingly; added Superset/Metabase/Jupyter to analytics tooling |
+| 1.3 | 01 July 2026 | Richard Raphita Ompusunggu | Added a 9th section — Personal Projects / Skills Showcase (R-SITE-17) for self-initiated Python/Kaggle, n8n, and McKinsey business-case work; updated section counts (8→9) and dependencies |
 
 ### Related Documents
 - [Implementation Plan](./implementation-plan.md) — Content & deployment strategy
@@ -87,7 +88,7 @@ No dedicated platform exists to present Richard's professional work in a structu
 5. Make the site mobile-responsive (recruiters often browse on phones)
 
 ### In Scope
-- Single-page website with 8 content sections (Hero, About, Expertise, Projects, Skills, Journey, Testimonials, Contact)
+- Single-page website with 9 content sections (Hero, About, Expertise, Featured Projects, Personal Projects, Skills, Journey, Testimonials, Contact)
 - Bilingual content (English + Bahasa Indonesia)
 - Responsive design (desktop + mobile)
 - Premium dark-themed UI with animations
@@ -135,7 +136,7 @@ No dedicated platform exists to present Richard's professional work in a structu
 Build a static, single-page portfolio website using HTML, CSS, and JavaScript (vanilla — no heavy frameworks). The site will feature:
 
 - **Premium dark theme** with teal/cyan accents and gold highlights
-- **8 scrollable sections** with smooth navigation
+- **9 scrollable sections** with smooth navigation
 - **Responsive design** for desktop, tablet, and mobile
 - **Scroll-triggered animations** for engagement
 - **Bilingual toggle** (EN/ID) for all content
@@ -187,6 +188,22 @@ Business rules:
 - Click to expand for full case study (Problem → Approach → Result)
 - *(Content pending — placeholder structure required)*
 
+### R-SITE-17 — Personal Projects / Skills Showcase
+Priority: P1
+Requirement: Display self-initiated projects that demonstrate hands-on skill across the expertise areas, with rich visuals. Renders as its own section immediately after Featured Projects (R-SITE-04).
+Business rules:
+- Purpose: prove technical ability **directly** using public/Kaggle data and personal builds — complements the anonymized professional case studies in R-SITE-04 (which prove *impact*)
+- Card/grid layout with filter tags by discipline: Data Analysis, Automation, Business Strategy, Process Improvement, Project Management
+- Each card shows: title, discipline tag(s), tools used, short description, and a visual (chart image, workflow screenshot, or diagram)
+- Click to expand for detail; where applicable, an outbound link to the full artifact ("View notebook on GitHub/Kaggle", "View n8n workflow", "Read the case")
+- Example projects to feature:
+  - **Data Analysis (Python):** Kaggle datasets showing EDA, regression (e.g., Boston House Prices), clustering, and time-series forecasting/ARIMA (e.g., Brazil E-commerce), with charts
+  - **Automation (n8n):** an end-to-end workflow with a screenshot/diagram of the node graph and what it automates
+  - **Business Strategy:** a business case structured and solved with McKinsey frameworks (MECE, issue tree, hypothesis-driven analysis)
+- Visuals optimized (WebP/AVIF) per NFR-01 and given descriptive alt text per NFR-02
+- Because this section is image-heavy, lazy-load below-the-fold visuals to protect the NFR-01 performance budget
+- *(Content partially available — Data Analysis projects exist; n8n and business-case content pending. Placeholder structure required.)*
+
 ### R-SITE-05 — Skills & Tools Grid
 Priority: P1
 Requirement: Display all skills and tools in a categorized, scannable grid.
@@ -236,7 +253,7 @@ Priority: P0
 Requirement: Sticky navigation bar with smooth scroll to sections.
 Business rules:
 - Fixed/sticky header on scroll
-- Navigation links for all 8 sections
+- Navigation links for all 9 sections
 - Active section highlighting on scroll
 - Mobile hamburger menu for smaller screens
 - Smooth scroll behavior on click
@@ -344,7 +361,7 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 | Page load speed | N/A | < 3 seconds | Lighthouse / PageSpeed Insights |
 | LinkedIn click-throughs | [X] | [X] — track over 3 months | Google Analytics or equivalent |
 | Recruiter inquiries | [X] | Increase vs. current rate | Email / LinkedIn messages |
-| Content completeness | Placeholder content | All 8 sections with real content | Manual review |
+| Content completeness | Placeholder content | All 9 sections with real content | Manual review |
 
 ---
 
@@ -369,6 +386,10 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 | Resume / CV (PDF) | Richard | Pending |
 | Social preview (Open Graph) image, 1200×630 | Richard / Design | Pending |
 | Analytics tool choice & account | Richard | Pending (see §9.5, D-01) |
+| Personal-project chart images (Python EDA exports) | Richard | Partial — projects exist, images to export |
+| n8n workflow screenshot/diagram + description | Richard | Pending |
+| Business-case write-up (McKinsey framework) + diagram | Richard | Pending |
+| Notebook/repo links (GitHub / Kaggle) for projects | Richard | Pending |
 
 ### Critical-Path Dependency
 **Professional photo** — needed for the hero section. The site can launch without it (using a typography-focused hero), but it significantly improves first impressions.
@@ -417,7 +438,7 @@ Decisions Richard needs to make before or during the build. Logging them here pr
 - 🔲 HTML structure and CSS styling
 
 ### Phase 2: Build (Next Sprint)
-- 🔲 Implement all 8 sections with animations
+- 🔲 Implement all 9 sections with animations
 - 🔲 Bilingual toggle system
 - 🔲 Responsive design implementation
 - 🔲 SEO & meta tags

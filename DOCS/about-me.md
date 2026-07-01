@@ -159,6 +159,73 @@ For each project, answer these questions. You don't need to name the company —
 
 ---
 
+## 9A. Personal Projects — Skills Showcase ⏳ in progress
+
+> These are **self-initiated projects** using public/Kaggle data and personal builds. Unlike Section 9 (professional case studies, which prove *impact* at work), this section proves *technical skill* directly — and is shown on the site with real visuals (charts, workflow screenshots, diagrams).
+
+**Fields to provide for each project:**
+- **Title**
+- **Discipline / Expertise Area(s):** Data Analysis / Automation / Business Strategy / Process Improvement / Project Management
+- **Tools Used**
+- **Data Source:** Kaggle dataset name/link, or "personal build"
+- **Task / Type of Analysis:** e.g., EDA, Regression, Clustering, ARIMA
+- **Description:** what you did and what it demonstrates
+- **Visuals:** chart images / workflow screenshot / diagram (file names once exported)
+- **Link (optional):** GitHub repo / Kaggle notebook / n8n workflow
+
+---
+
+### Data Analysis (Python)
+
+#### Boston House Prices ✅
+- **Discipline:** Data Analysis
+- **Tools:** Python (pandas, seaborn/matplotlib), Jupyter Notebook
+- **Data Source:** Kaggle — Boston Housing dataset
+- **Task:** EDA, Regression
+- **Description:** Exploratory Data Analysis and a regression model to estimate house prices in Boston from the available variables. The estimate can be used to judge whether a house is over- or under-valued.
+- **Visuals:** feature scatter/regression plots ⏳ _export chart images to `/assets/projects/`_
+- **Link:** ⏳ _add GitHub / Kaggle notebook link_
+
+#### Brazil E-commerce ✅
+- **Discipline:** Data Analysis
+- **Tools:** Python (pandas, seaborn/matplotlib), Jupyter Notebook
+- **Data Source:** Kaggle — Brazilian E-commerce (Olist) dataset
+- **Task:** EDA, Clustering, ARIMA
+- **Description:** EDA plus clustering by region to see which regions have the highest payment and growth, and ARIMA time-series forecasting to predict future orders and payment.
+- **Visuals:** growth-vs-payment cluster plots ⏳ _export chart images_
+- **Link:** ⏳ _add GitHub / Kaggle notebook link_
+
+#### Project 1 — _(title was cut off in your screenshot)_ ⏳
+- _To be added — fill in the fields above_
+
+---
+
+### Automation (n8n)
+
+#### n8n Workflow ⏳
+- **Discipline:** Automation
+- **Tools:** n8n
+- **Data Source:** personal build
+- **Description:** _To be added — describe the workflow (trigger → actions), what it automates, and the time/effort it saves._
+- **Visuals:** ⏳ _screenshot of the node graph_
+- **Link:** ⏳ _optional_
+
+---
+
+### Business Strategy (McKinsey Framework)
+
+#### Business Case ⏳
+- **Discipline:** Business Strategy
+- **Frameworks:** MECE, Issue Tree, Hypothesis-Driven Analysis
+- **Description:** _To be added — the business problem, how you structured it with a McKinsey framework, and your recommendation._
+- **Visuals:** ⏳ _issue tree / framework diagram_
+- **Link:** ⏳ _optional_
+
+> [!TIP]
+> For each project, add both a **thumbnail** (shown on the card) and 1–3 **detail images** (shown on expand). Export charts at a reasonable resolution and compress them (WebP) so the page stays fast.
+
+---
+
 ## 10. Skills & Tools (Full List) ✅
 
 **Data & Analytics:**
@@ -304,4 +371,5 @@ This section contains the raw domain context provided — used as a reference to
 > **Remaining items to complete before building the website:**
 > 1. ✅ Add standout achievements with numbers for each expertise area (Sections 4–8) — *done*
 > 2. ⏳ Add 3-5 featured project case studies (Section 9)
-> 3. ⏳ Add testimonials if available (Section 14)
+> 3. ⏳ Personal Projects (Section 9A): export chart images, add n8n workflow screenshot, write the business case, and add GitHub/Kaggle links
+> 4. ⏳ Add testimonials if available (Section 14)
