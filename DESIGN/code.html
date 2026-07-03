@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Richard Raphita Ompusunggu | Senior Process Improvement Analyst</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-fixed-variant": "#0040a0",
+                "surface-bright": "#2b3a50",
+                "on-error-container": "#ffdad6",
+                "surface-container-highest": "#27354c",
+                "secondary": "#f2be69",
+                "surface-container": "#112035",
+                "inverse-primary": "#0056d0",
+                "on-tertiary-fixed": "#321200",
+                "on-error": "#690005",
+                "text-secondary": "#94A3B8",
+                "primary-fixed": "#dae2ff",
+                "on-primary-fixed": "#001847",
+                "tertiary": "#ffb68c",
+                "error": "#ffb4ab",
+                "data-teal": "#2DD4BF",
+                "surface-container-low": "#0c1c31",
+                "error-container": "#93000a",
+                "on-primary": "#002c72",
+                "on-tertiary-container": "#481d00",
+                "secondary-fixed-dim": "#f2be69",
+                "on-tertiary": "#532200",
+                "tertiary-container": "#e56f17",
+                "on-surface-variant": "#c2c6d7",
+                "on-secondary": "#432c00",
+                "surface-container-high": "#1c2a40",
+                "surface-accent": "#1B3252",
+                "on-secondary-fixed": "#281900",
+                "on-primary-container": "#002664",
+                "on-secondary-container": "#fac56f",
+                "outline": "#8c90a0",
+                "inverse-surface": "#d5e3ff",
+                "on-surface": "#d5e3ff",
+                "primary-fixed-dim": "#b1c5ff",
+                "surface-container-lowest": "#000e23",
+                "on-tertiary-fixed-variant": "#753400",
+                "surface": "#041428",
+                "secondary-fixed": "#ffdeae",
+                "surface-tint": "#b1c5ff",
+                "surface-elevated": "#14263F",
+                "tertiary-fixed": "#ffdbc9",
+                "surface-variant": "#27354c",
+                "primary": "#b1c5ff",
+                "inverse-on-surface": "#223147",
+                "tertiary-fixed-dim": "#ffb68c",
+                "secondary-container": "#765000",
+                "background": "#041428",
+                "on-background": "#d5e3ff",
+                "surface-dim": "#041428",
+                "primary-container": "#5a8cff",
+                "on-secondary-fixed-variant": "#604100",
+                "outline-variant": "#424654",
+                "text-primary": "#F8FAFC"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "24px",
+                "stack-lg": "32px",
+                "container-max": "1280px",
+                "section-padding-desktop": "120px",
+                "stack-md": "16px",
+                "section-padding-mobile": "64px",
+                "stack-sm": "8px"
+            },
+            "fontFamily": {
+                "stats-num": ["Hanken Grotesk"],
+                "label-caps": ["JetBrains Mono"],
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "display-hero-mobile": ["Hanken Grotesk"],
+                "headline-md": ["Hanken Grotesk"],
+                "display-hero": ["Hanken Grotesk"],
+                "headline-lg": ["Hanken Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            @apply text-primary border-b-2 border-primary pb-1 font-bold;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(177, 197, 255, 0.3);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            background-color: theme('colors.surface-accent');
+            border-color: rgba(90, 140, 255, 0.3);
+        }
+        .timeline-dot::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: theme('colors.secondary');
+            left: -7px;
+            top: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- 1. TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 glass-header border-b border-outline-variant/10">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto py-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+                Richard R. Ompusunggu
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-text-secondary font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#expertise">Expertise</a>
+<a class="text-text-secondary font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
+<a class="text-text-secondary font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#journey">Journey</a>
+<a class="text-text-secondary font-medium font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="flex bg-surface-container rounded-lg p-1">
+<button class="px-3 py-1 text-label-caps font-label-caps bg-primary text-on-primary rounded-lg transition-all duration-300">EN</button>
+<button class="px-3 py-1 text-label-caps font-label-caps text-text-secondary hover:text-on-background transition-all duration-300">ID</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- 2. Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 px-gutter max-w-container-max mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-stack-lg">
+<div class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high border border-primary/20 text-primary font-label-caps text-label-caps">
+                        Senior Process Improvement Analyst
+                    </div>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-text-primary leading-tight tracking-tight text-glow">
+                        Turning Data Into <span class="text-primary">Decisions</span>, Processes Into <span class="text-secondary">Performance</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-xl">
+                        Specializing in Fintech and Banking operations, I bridge the gap between complex data landscapes and strategic execution to drive institutional efficiency.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-3 bg-primary text-on-primary font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all duration-300" href="#projects">
+                            View My Work
+                        </a>
+<a class="px-8 py-3 border border-secondary text-secondary font-bold rounded-lg hover:bg-secondary/10 active:scale-95 transition-all duration-300 flex items-center gap-2" href="https://linkedin.com" target="_blank">
+                            Connect on LinkedIn
+                        </a>
+</div>
+</div>
+<div class="flex justify-center md:justify-end">
+<div class="relative w-64 h-64 md:w-96 md:h-96">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-secondary/20 animate-pulse"></div>
+<img class="w-full h-full object-cover rounded-full border-4 border-surface-elevated shadow-2xl z-10 relative" data-alt="A professional, executive headshot of Richard Raphita Ompusunggu, a confident male professional in a sharp dark navy blazer. He is standing against a minimalist corporate backdrop with soft geometric lighting. The overall visual style is premium and authoritative, using a color palette of deep blues and subtle gold highlights to match a high-performance banking and fintech environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTWDXFa7-jgps8SQ-EJcOUahn6UtyeNUqgHYd1IVoAGu8Hl9FQrqHan2dMKSo7np-lFmB_YCIgB5vriIrlQI0iW2fW4EuXnE1d-bDhcvThyIepDeXBVYApewGuzyeA7bOoW4l3qncLsh3F5X5eckkKuKEVE05_LuYTIxwo6-tscSrwUruNep2puoss-3SQv8aBCY5eXCFpHJL3_PMCam-8rNWPwRdJOdQ5uBMKORTOw4kjQitfn4fuHnVSqxDGMCpAOh9hdEGs-KCk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. About Me -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest" id="about">
+<div class="px-gutter max-w-container-max mx-auto grid md:grid-cols-12 gap-12">
+<div class="md:col-span-7">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-8">Bridging Analytics &amp; Operations</h2>
+<div class="space-y-6 font-body-md text-body-md text-text-secondary">
+<p>With over several years in the Fintech and Banking sector, I've dedicated my career to dissecting operational bottlenecks and engineering scalable solutions. My background at industry leaders like <strong>Amartha</strong> and <strong>KoinWorks</strong> has equipped me with a unique lens for process optimization.</p>
+<p>I thrive at the intersection of quantitative analysis and strategic planning, ensuring that every data point serves a purpose in the broader business objective. From automating manual workflows to designing high-impact partnership lending systems, my focus remains constant: <span class="text-on-background font-semibold">Excellence through precision.</span></p>
+</div>
+</div>
+<div class="md:col-span-5 grid grid-cols-2 gap-4 h-fit">
+<div class="bg-surface-elevated p-8 rounded-xl border border-outline-variant/10 text-center">
+<div class="font-stats-num text-stats-num text-primary mb-2" id="counter-exp">5+</div>
+<div class="font-label-caps text-label-caps text-text-secondary">Years of Experience</div>
+</div>
+<div class="bg-surface-elevated p-8 rounded-xl border border-outline-variant/10 text-center">
+<div class="font-stats-num text-stats-num text-secondary mb-2" id="counter-projects">50+</div>
+<div class="font-label-caps text-label-caps text-text-secondary">Processes Optimized</div>
+</div>
+<div class="bg-surface-elevated p-8 rounded-xl border border-outline-variant/10 text-center">
+<div class="font-stats-num text-stats-num text-data-teal mb-2" id="counter-impact">30%</div>
+<div class="font-label-caps text-label-caps text-text-secondary">Avg. Efficiency Gain</div>
+</div>
+<div class="bg-surface-elevated p-8 rounded-xl border border-outline-variant/10 text-center">
+<div class="font-stats-num text-stats-num text-tertiary mb-2" id="counter-clients">12+</div>
+<div class="font-label-caps text-label-caps text-text-secondary">Strategic Partners</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Core Expertise -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop" id="expertise">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-4">Core Pillars of Expertise</h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl mx-auto">Leveraging a multi-disciplinary approach to solve complex institutional challenges.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-elevated p-6 rounded-xl border border-outline-variant/10 card-hover transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-4">Data Analysis</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6 flex-grow">Transforming raw datasets into actionable insights using SQL, Python, and BI tools.</p>
+<div class="text-primary font-label-caps text-label-caps pt-4 border-t border-outline-variant/10 w-full">99.9% Accuracy</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-elevated p-6 rounded-xl border border-outline-variant/10 card-hover transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-4">Business Strategy</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6 flex-grow">Developing long-term roadmaps for product scaling and market positioning.</p>
+<div class="text-secondary font-label-caps text-label-caps pt-4 border-t border-outline-variant/10 w-full">2x Growth Target</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-elevated p-6 rounded-xl border border-outline-variant/10 card-hover transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-14 h-14 bg-data-teal/10 rounded-full flex items-center justify-center text-data-teal mb-6 group-hover:bg-data-teal group-hover:text-background transition-colors">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-4">Operational Excellence</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6 flex-grow">Standardizing SOPs and refining workflows to minimize waste.</p>
+<div class="text-data-teal font-label-caps text-label-caps pt-4 border-t border-outline-variant/10 w-full">Lean Six Sigma</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-elevated p-6 rounded-xl border border-outline-variant/10 card-hover transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-14 h-14 bg-tertiary/10 rounded-full flex items-center justify-center text-tertiary mb-6 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-3xl">account_tree</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-4">Project Management</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6 flex-grow">Leading cross-functional teams from discovery to deployment.</p>
+<div class="text-tertiary font-label-caps text-label-caps pt-4 border-t border-outline-variant/10 w-full">Agile Certified</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-elevated p-6 rounded-xl border border-outline-variant/10 card-hover transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">auto_mode</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-4">Automation</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6 flex-grow">Building low-code/no-code workflows to eliminate manual effort.</p>
+<div class="text-primary font-label-caps text-label-caps pt-4 border-t border-outline-variant/10 w-full">n8n / Python</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Featured Projects -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="projects">
+<div class="px-gutter max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-12">Featured Case Studies</h2>
+<div class="space-y-16">
+<!-- Case Study 1 -->
+<div class="grid md:grid-cols-2 gap-12 items-center bg-surface-elevated/50 p-8 rounded-2xl border border-outline-variant/10">
+<div class="space-y-6">
+<h3 class="font-headline-lg text-headline-md text-primary">Partnership Lending Dashboard</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-error/10 text-error flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">report_problem</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Problem</p>
+<p class="font-body-md text-body-md text-text-secondary">Partnership performance data was siloed across multiple spreadsheets, delaying reporting by 5 days.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary/10 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Approach</p>
+<p class="font-body-md text-body-md text-text-secondary">Designed a unified ETL pipeline using SQL and connected it to a real-time Metabase dashboard.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-secondary/10 text-secondary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Result</p>
+<p class="font-body-md text-body-md text-text-secondary">Achieved 0-day reporting delay and identified a 15% discrepancy in underperforming portfolios.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20">
+<img class="w-full h-auto" data-alt="A clean, high-fidelity UI design of a financial dashboard showing partnership lending metrics. The interface features dark navy backgrounds with Professional Blue data visualizations, line charts showing upward growth trends, and gold-highlighted summary cards. The aesthetic is ultra-modern, corporate, and data-dense, with a focus on institutional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAioZwD4ZexutR1KsitPjUmkVgdxk7nnEy5qPB_yOAFuerxvDPEgDR7oZvRonk9VgMBIE3RTK2AkJfFCluybjGh0GAtDmAWMftN330vogylp6RczmltD33FaDjjO71LQaudojgWOWQJb_IQGURnjENFIQyP5lBiIWjIkFc5TR5DlZZC1n0u_j6pxfLh2LEQfVM15V9BTsVqGllSi53xl7odONtNkTPtiSUvzbnG5_vUHe7Mvm7nNXl13sB0qIz8Zh9qoqepLdP6VlCo"/>
+</div>
+</div>
+<!-- Case Study 2 -->
+<div class="grid md:grid-cols-2 gap-12 items-center bg-surface-elevated/50 p-8 rounded-2xl border border-outline-variant/10 md:flex-row-reverse">
+<div class="md:order-2 space-y-6">
+<h3 class="font-headline-lg text-headline-md text-secondary">Workflow Automation System</h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-error/10 text-error flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">report_problem</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Problem</p>
+<p class="font-body-md text-body-md text-text-secondary">Manual reconciliation of loan disbursements was causing frequent human errors and operational fatigue.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary/10 text-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Approach</p>
+<p class="font-body-md text-body-md text-text-secondary">Implemented an n8n automation layer that auto-validates disbursement logs against bank statements.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 shrink-0 bg-secondary/10 text-secondary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface mb-1">Result</p>
+<p class="font-body-md text-body-md text-text-secondary">Reduced manual workload by 40 hours per week and increased disbursement accuracy to 100%.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:order-1 rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20">
+<img class="w-full h-auto" data-alt="A conceptual 3D visualization of a complex digital workflow process. Glowing blue lines and gold particles connect various abstract data nodes representing automation and efficiency. The scene is dark and atmospheric, with a shallow depth of field, emphasizing high-tech connectivity and streamlined operational systems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV9EwcbbLTI8X0lEgWJEf4mESIVhvTmK7eT51lPy9TSmcFok9Qgne1SkjcVH2B0pGwu2qzwE8N7cHPfa6RH0ta2TriiGz5judqAUBKrlvlrNltQnCr1BV6sErFVg-4or4crbVxDLFZX64ANMOspwN0kHD0Uk5K_Mz7FzyvgYEzi4kqOETGXr4Ks5ixGLlAoflL8czNoSZzoOp8ITyTVYJajTfqtTBlqQ5R900Yu809v9qhuRGz5ceDszhE7gOgoLXeGdPAdnZn9sGe"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Personal Projects -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-2">Technical Deep Dives</h2>
+<p class="font-body-md text-body-md text-text-secondary">Side projects focused on Python, Kaggle, and n8n.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-elevated rounded-2xl overflow-hidden border border-outline-variant/10 group">
+<div class="h-48 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="A high-contrast visualization of Python code on a dark IDE background, with vibrant blue and gold syntax highlighting. Next to the code is a complex statistical distribution chart generated by Matplotlib, representing a Kaggle dataset analysis. The mood is technical and intellectual, signifying advanced data science capabilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeFEYKaU5dfsDJGuBo3nH0Bc3kvuf5kRp3xuhyv1p4rpfGihbwGWilBRMTrbA2JNPkxLMRDZ4vovT_biE3poGm_dQTpEq77DyNq6tmMNhAxbN4_Rmnit83w--VV-yLgk-U0uUQ7pCelkFkSLBcm1TpuEdkIxO9Cs7yhCbzfCxi1tdJ1AbjfysKoDOJaC8JUNeVwghQv6qB9_dB_Fj4sTK7lnoon6Nr8qTLPO_xcrBQ1KccmH5KUFYQR4aWQVLOTnbQE8Hz9D5A1kCZ"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Python Data Forensics</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6">Exploratory data analysis of consumer lending patterns using Pandas and NumPy, featured on Kaggle with 50+ upvotes.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary font-label-caps text-label-caps rounded">Kaggle</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-caps text-label-caps rounded">Python</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-elevated rounded-2xl overflow-hidden border border-outline-variant/10 group">
+<div class="h-48 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" data-alt="A macro-shot of a modern office setup at night, with multiple glowing screens displaying automation nodes and logical flowcharts. The lighting is dominated by professional blue and deep indigo, creating a focused, high-productivity atmosphere for engineering advanced no-code solutions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Kl4ksxzmB9bwFRp-evTdSd4mQ_AsnRzboPaJE_oDzybmpjOpVyP1Q4Aa12VHr6vkKFwSrIrvwOvrBSVDo7Zxq4-K8GC7F6kQQjulQSxuqUb5OJvXpq_ZGn6T0WLxSVVANaX_crxxkDX3n8WRaXjJZm4x-ugI6LGdsX6uYoAe7KHNj9kTTbh0v0BrJXwbxKHYisVGGK8vfMkI95hTA0-2GQRVXEjhADyhRvM5E4N1kQjPM3mzrNR_6fiJ4NinFkpCmircYXGK4RVh"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Advanced n8n Flows</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-6">Building autonomous notification systems for risk alerts and weekly performance summaries integrated with Slack.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-secondary font-label-caps text-label-caps rounded">n8n</span>
+<span class="px-3 py-1 bg-surface-container text-secondary font-label-caps text-label-caps rounded">No-Code</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Skills & Tools -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest">
+<div class="px-gutter max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-12 text-center">Toolkit for Performance</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Data</h4>
+<ul class="space-y-2 font-body-md text-body-md text-text-secondary">
+<li>SQL / PostgreSQL</li>
+<li>Python (Pandas)</li>
+<li>Metabase / Tableau</li>
+<li>Excel (Advanced)</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Automation</h4>
+<ul class="space-y-2 font-body-md text-body-md text-text-secondary">
+<li>n8n.io</li>
+<li>Zapier</li>
+<li>Python Scripts</li>
+<li>API Integration</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-data-teal uppercase tracking-widest">PM &amp; Ops</h4>
+<ul class="space-y-2 font-body-md text-body-md text-text-secondary">
+<li>Jira / Trello</li>
+<li>Scrum / Agile</li>
+<li>BPMN 2.0</li>
+<li>Six Sigma</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest">Strategy</h4>
+<ul class="space-y-2 font-body-md text-body-md text-text-secondary">
+<li>Market Research</li>
+<li>SWOT Analysis</li>
+<li>Financial Modeling</li>
+<li>SOP Design</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">Soft Skills</h4>
+<ul class="space-y-2 font-body-md text-body-md text-text-secondary">
+<li>Stakeholder Mgmt</li>
+<li>Bilingual (EN/ID)</li>
+<li>Problem Solving</li>
+<li>Executive Comms</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Professional Journey -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop" id="journey">
+<div class="px-gutter max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-16 text-center">Professional Timeline</h2>
+<div class="max-w-3xl mx-auto border-l-2 border-surface-accent pl-12 space-y-16 relative">
+<!-- Amartha -->
+<div class="relative timeline-dot">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">2022 - Present</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Senior Process Improvement Analyst</h3>
+<p class="font-body-md text-body-md text-text-secondary font-semibold mb-4 text-secondary">Amartha (Fintech Lending)</p>
+<p class="font-body-md text-body-md text-text-secondary">Leading optimization initiatives for rural lending operations. Driving 25% faster loan processing through data-driven workflow redesign.</p>
+</div>
+<!-- KoinWorks -->
+<div class="relative timeline-dot">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">2020 - 2022</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Operations Specialist</h3>
+<p class="font-body-md text-body-md text-text-secondary font-semibold mb-4 text-secondary">KoinWorks (P2P Lending)</p>
+<p class="font-body-md text-body-md text-text-secondary">Focused on SME lending process improvement and partner performance tracking. Streamlined merchant onboarding flows.</p>
+</div>
+<!-- Education -->
+<div class="relative timeline-dot">
+<span class="font-label-caps text-label-caps text-primary mb-2 block">Graduated 2019</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">B.S. Industrial Engineering</h3>
+<p class="font-body-md text-body-md text-text-secondary font-semibold mb-4 text-secondary">Leading National University</p>
+<p class="font-body-md text-body-md text-text-secondary">Specialized in Optimization and Operations Research. Honors graduate with focus on Lean methodology.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Testimonials -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-high">
+<div class="px-gutter max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary mb-12 text-center">Endorsements</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-surface-elevated p-8 rounded-2xl border border-outline-variant/10 relative">
+<span class="material-symbols-outlined absolute top-8 right-8 text-primary/20 text-6xl">format_quote</span>
+<p class="font-body-md text-body-md italic text-text-secondary mb-6 relative z-10">
+                            "Richard has an uncanny ability to spot inefficiencies that others miss. His work on the partnership dashboard transformed how we look at our portfolio performance overnight."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Director of Operations</p>
+<p class="font-label-caps text-label-caps text-text-secondary">Major Fintech Firm</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-elevated p-8 rounded-2xl border border-outline-variant/10 relative">
+<span class="material-symbols-outlined absolute top-8 right-8 text-primary/20 text-6xl">format_quote</span>
+<p class="font-body-md text-body-md italic text-text-secondary mb-6 relative z-10">
+                            "He bridges the technical and business gap perfectly. Richard doesn't just present data; he presents solutions that actually work in the real world."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container"></div>
+<div>
+<p class="font-body-md font-bold text-on-surface">Product Manager</p>
+<p class="font-label-caps text-label-caps text-text-secondary">Banking Partner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Contact / Footer -->
+<section class="pt-section-padding-mobile md:pt-section-padding-desktop pb-0" id="contact">
+<div class="px-gutter max-w-container-max mx-auto text-center mb-20">
+<h2 class="font-display-hero text-display-hero-mobile md:text-headline-lg text-text-primary mb-6">Let's Discuss Your Next Efficiency Gain</h2>
+<p class="font-body-lg text-body-lg text-text-secondary mb-12 max-w-2xl mx-auto">Whether you're looking to optimize a single process or transform an entire department, I'm here to help.</p>
+<a class="inline-flex items-center gap-3 px-12 py-5 bg-primary text-on-primary font-bold rounded-full text-lg hover:scale-105 transition-transform duration-300" href="mailto:richardraphita@gmail.com">
+<span class="material-symbols-outlined">mail</span>
+                    richardraphita@gmail.com
+                </a>
+</div>
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-gutter max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-on-surface mb-2">Richard Raphita Ompusunggu</div>
+<p class="font-body-md text-body-md text-text-secondary">© 2024. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-text-secondary hover:text-primary font-body-md text-body-md transition-all duration-300" href="#">LinkedIn</a>
+<a class="text-text-secondary hover:text-primary font-body-md text-body-md transition-all duration-300" href="mailto:richardraphita@gmail.com">Email</a>
+<a class="text-text-secondary hover:text-primary font-body-md text-body-md transition-all duration-300" href="#">Download CV</a>
+</div>
+</div>
+</footer>
+</section>
+</main>
+<!-- Micro-interactions Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation link active state
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.add('text-text-secondary');
+                    if (link.getAttribute('href').includes(current) && current !== '') {
+                        link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                        link.classList.remove('text-text-secondary');
+                    }
+                });
+            });
+
+            // Smooth simple scroll reveal
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
