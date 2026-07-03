@@ -2,7 +2,7 @@
 # Portfolio Website — Richard Raphita Ompusunggu
 
 No.: 001/BRD/PERSONAL/PORTFOLIO/07/2026   Date: 01 July 2026
-Version: 1.4   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
+Version: 1.5   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
 
 ---
 
@@ -17,6 +17,7 @@ Version: 1.4   Department: Personal Project   Prepared by: Richard Raphita Ompus
 | 1.2 | 01 July 2026 | Richard Raphita Ompusunggu | Achievement metrics for all 5 expertise areas received (about-me §4–8); updated dependency status, assumptions, roadmap, and next steps accordingly; added Superset/Metabase/Jupyter to analytics tooling |
 | 1.3 | 01 July 2026 | Richard Raphita Ompusunggu | Added a 9th section — Personal Projects / Skills Showcase (R-SITE-17) for self-initiated Python/Kaggle, n8n, and McKinsey business-case work; updated section counts (8→9) and dependencies |
 | 1.4 | 01 July 2026 | Richard Raphita Ompusunggu | 3 professional case studies received (about-me §9) and professional photo provided (`DOCS/picture.JPG`); updated R-SITE-01/04, assumptions, dependencies, risks, critical path, and next steps; Personal Projects visuals now the critical-path content |
+| 1.5 | 03 July 2026 | Richard Raphita Ompusunggu | Locked design system to navy-blue (D-08); decided placeholder-first launch for Personal Projects & Testimonials (D-09); initial website build (index.html + assets) — bilingual, responsive, 9 sections |
 
 ### Related Documents
 - [Implementation Plan](./implementation-plan.md) — Content & deployment strategy
@@ -136,7 +137,7 @@ No dedicated platform exists to present Richard's professional work in a structu
 
 Build a static, single-page portfolio website using HTML, CSS, and JavaScript (vanilla — no heavy frameworks). The site will feature:
 
-- **Premium dark theme** with teal/cyan accents and gold highlights
+- **Premium navy-blue theme** — deep navy base (#0A1A2F) with a bright professional-blue accent (#3E7BFA) and subtle warm-gold highlights (#E4B15E)
 - **9 scrollable sections** with smooth navigation
 - **Responsive design** for desktop, tablet, and mobile
 - **Scroll-triggered animations** for engagement
@@ -426,6 +427,8 @@ Decisions Richard needs to make before or during the build. Logging them here pr
 | D-05 | Custom domain | `github.io` subdomain now / buy domain (~$12/yr) | Launch on `github.io`, add a domain later |
 | D-06 | Launch strategy | Wait for all real content / launch with tasteful placeholders and iterate | Launch with placeholders, complete content within 2 weeks |
 | D-07 | Show location publicly | Show "Bekasi, Indonesia" / hide | Show region — helps local recruiters and SEO |
+| D-08 | Design color system | Navy + blue + gold / other | ✅ **Decided (v1.5):** navy `#0A1A2F`, professional-blue `#3E7BFA`, subtle gold `#E4B15E` |
+| D-09 | Launch Personal Projects (§9A) & Testimonials (§14) | Placeholder-first / wait for content | ✅ **Decided (v1.5):** ship as placeholder sections, review the live site, then add visuals/quotes |
 
 ---
 

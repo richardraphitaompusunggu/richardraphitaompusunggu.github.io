@@ -217,9 +217,9 @@ Each expertise area will have its own card with an icon, description, and key hi
 
 | Aspect | Approach |
 |---|---|
-| **Style** | Modern, professional, premium dark theme with accent gradients |
-| **Typography** | Inter or Outfit from Google Fonts |
-| **Colors** | Deep navy/charcoal base with teal/cyan accents and warm gold highlights |
+| **Style** | Modern, professional, premium navy-blue theme with accent gradients |
+| **Typography** | Outfit (headings) + Inter (body) from Google Fonts |
+| **Colors** | Deep navy-blue base (`#0A1A2F` / `#0F2440`) · professional-blue primary accent (`#3E7BFA`, light `#6FA0FF`) · subtle warm-gold highlight for metrics (`#E4B15E`) · text `#EAF1FA` / muted `#9DB2CC`. Navy + blue + gold is a classic, finance-appropriate, professional pairing. |
 | **Animations** | Smooth scroll reveals, hover effects, number counters |
 | **Responsiveness** | Fully mobile-responsive (recruiters often check on phones) |
 | **Performance** | Lightweight, fast-loading single page |

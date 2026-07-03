@@ -1,0 +1,267 @@
+/* ============================================================
+   CONTENT & TRANSLATIONS
+   All site copy lives here so it can be edited without touching
+   markup or logic (BRD NFR-05). Each field carries { en, id }.
+   ============================================================ */
+
+const PROFILE = {
+  name: "Richard Raphita Ompusunggu",
+  email: "richardraphita@gmail.com",
+  linkedin: "https://www.linkedin.com/in/richardraphita/",
+  github: "https://github.com/richardraphitaompusunggu",
+  photo: "assets/img/richard.jpg",
+  // TODO: drop the real PDF at this path, then point the CV button here.
+  cv: null,
+};
+
+/* Simple UI strings keyed for data-i18n attributes in index.html */
+const I18N = {
+  "nav.about":        { en: "About",            id: "Tentang" },
+  "nav.expertise":    { en: "Expertise",        id: "Keahlian" },
+  "nav.projects":     { en: "Projects",         id: "Proyek" },
+  "nav.lab":          { en: "Lab",              id: "Lab" },
+  "nav.skills":       { en: "Skills",           id: "Keahlian" },
+  "nav.journey":      { en: "Journey",          id: "Perjalanan" },
+  "nav.contact":      { en: "Contact",          id: "Kontak" },
+
+  "hero.role":        { en: "Senior Process Improvement Analyst", id: "Senior Process Improvement Analyst" },
+  "hero.headline":    { en: "Turning Data Into Decisions, Processes Into Performance",
+                        id: "Mengubah Data Menjadi Keputusan, Proses Menjadi Kinerja" },
+  "hero.tagline":     { en: "I help organizations improve operational performance through data-driven analysis, structured problem-solving, and intelligent automation — turning messy processes into scalable, efficient systems.",
+                        id: "Saya membantu organisasi meningkatkan kinerja operasional melalui analisis berbasis data, pemecahan masalah yang terstruktur, dan otomatisasi cerdas — mengubah proses yang berantakan menjadi sistem yang efisien dan terukur." },
+  "hero.cta_work":    { en: "View My Work",       id: "Lihat Karya Saya" },
+  "hero.cta_linkedin":{ en: "Connect on LinkedIn",id: "Terhubung di LinkedIn" },
+  "hero.location":    { en: "Bekasi, Indonesia",  id: "Bekasi, Indonesia" },
+  "hero.badge":       { en: "Years in fintech",   id: "Tahun di fintech" },
+
+  "about.eyebrow":    { en: "About Me",           id: "Tentang Saya" },
+  "about.title":      { en: "Measure it. Understand it. Improve it. Automate it.",
+                        id: "Ukur. Pahami. Tingkatkan. Otomatiskan." },
+  "about.summary":    { en: "I am a Senior Process Improvement Analyst with 6 years of experience driving operational excellence across the fintech and financial services industries. With a Master's in Business Management and a Data Science background, I bring a unique blend of strategic thinking, analytical rigor, and hands-on execution. I specialize in transforming complex operational challenges into structured, data-backed improvement plans — from designing credit policies to building automated workflows. When systems aren't ready, I build them myself.",
+                        id: "Saya seorang Senior Process Improvement Analyst dengan 6 tahun pengalaman mendorong keunggulan operasional di industri fintech dan jasa keuangan. Dengan gelar Magister Manajemen Bisnis dan latar belakang Data Science, saya memadukan pemikiran strategis, ketelitian analitis, dan eksekusi langsung. Saya berfokus mengubah tantangan operasional yang kompleks menjadi rencana perbaikan yang terstruktur dan berbasis data — dari merancang kebijakan kredit hingga membangun alur kerja otomatis. Ketika sistem belum siap, saya membangunnya sendiri." },
+  "about.philosophy": { en: "“I believe every process can be improved, every dataset holds an untold story, and every strategy should be grounded in evidence.”",
+                        id: "“Saya percaya setiap proses dapat ditingkatkan, setiap dataset menyimpan cerita yang belum terungkap, dan setiap strategi harus berdasarkan bukti.”" },
+  "about.industries_label": { en: "Industries", id: "Industri" },
+  "about.industries": { en: "Fintech · Financial Services · Banking", id: "Fintech · Jasa Keuangan · Perbankan" },
+
+  "expertise.eyebrow":{ en: "Core Expertise",     id: "Keahlian Inti" },
+  "expertise.title":  { en: "Five pillars I build value on",
+                        id: "Lima pilar tempat saya membangun nilai" },
+  "expertise.tools":  { en: "Key tools",          id: "Alat utama" },
+
+  "projects.eyebrow": { en: "Featured Projects",  id: "Proyek Unggulan" },
+  "projects.title":   { en: "Selected work from the field",
+                        id: "Karya pilihan dari lapangan" },
+  "projects.problem": { en: "Problem",            id: "Masalah" },
+  "projects.approach":{ en: "Approach",           id: "Pendekatan" },
+  "projects.result":  { en: "Result",             id: "Hasil" },
+  "projects.tools":   { en: "Tools",              id: "Alat" },
+
+  "lab.eyebrow":      { en: "Personal Projects",  id: "Proyek Pribadi" },
+  "lab.title":        { en: "Hands-on skills, built in the open",
+                        id: "Keterampilan langsung, dibangun secara terbuka" },
+  "lab.subtitle":     { en: "Self-initiated projects using public data and personal builds. Visuals and full write-ups are on the way.",
+                        id: "Proyek atas inisiatif sendiri menggunakan data publik dan hasil bangunan pribadi. Visual dan penjelasan lengkap akan segera hadir." },
+  "lab.soon":         { en: "Coming soon",        id: "Segera hadir" },
+
+  "skills.eyebrow":   { en: "Skills & Tools",     id: "Keahlian & Alat" },
+  "skills.title":     { en: "The toolkit behind the work",
+                        id: "Perangkat di balik pekerjaan" },
+
+  "journey.eyebrow":  { en: "Professional Journey", id: "Perjalanan Profesional" },
+  "journey.title":    { en: "Experience, education & certifications",
+                        id: "Pengalaman, pendidikan & sertifikasi" },
+
+  "testimonials.eyebrow": { en: "Testimonials",   id: "Testimoni" },
+  "testimonials.title":   { en: "What colleagues say",
+                            id: "Apa kata rekan kerja" },
+  "testimonials.soon":    { en: "Testimonials coming soon",
+                            id: "Testimoni segera hadir" },
+
+  "contact.eyebrow":  { en: "Get in touch",       id: "Hubungi Saya" },
+  "contact.title":    { en: "Let's build better processes together",
+                        id: "Mari bangun proses yang lebih baik bersama" },
+  "contact.closing":  { en: "I'm always open to new challenges and conversations. Let's discuss how I can bring value to your team.",
+                        id: "Saya selalu terbuka untuk tantangan dan percakapan baru. Mari diskusikan bagaimana saya dapat memberi nilai bagi tim Anda." },
+  "contact.cta":      { en: "Connect on LinkedIn", id: "Terhubung di LinkedIn" },
+  "contact.email":    { en: "Email me",           id: "Kirim email" },
+
+  "footer.rights":    { en: "Built with vanilla HTML, CSS & JavaScript.",
+                        id: "Dibuat dengan HTML, CSS & JavaScript murni." },
+};
+
+/* Animated stat counters in the About section */
+const STATS = [
+  { value: 6,  suffix: "",  label: { en: "Years of experience",  id: "Tahun pengalaman" } },
+  { value: 5,  suffix: "",  label: { en: "Expertise areas",      id: "Area keahlian" } },
+  { value: 3,  suffix: "",  label: { en: "Products launched",    id: "Produk diluncurkan" } },
+  { value: 20, suffix: "+", label: { en: "Automations built",    id: "Otomatisasi dibangun" } },
+];
+
+/* Core expertise cards */
+const EXPERTISE = [
+  {
+    icon: "chart",
+    title: { en: "Data Analysis", id: "Analisis Data" },
+    desc: {
+      en: "I turn messy, raw data into decisions — cleaning, extracting, and modelling it into dashboards and KPI trackers that stakeholders actually use.",
+      id: "Saya mengubah data mentah yang berantakan menjadi keputusan — membersihkan, mengekstrak, dan memodelkannya menjadi dashboard serta pelacak KPI yang benar-benar digunakan pemangku kepentingan.",
+    },
+    tools: ["SQL", "Python", "Superset", "Metabase", "Tableau", "Looker"],
+    metric: { en: "Cut a 20+ spreadsheet KPI setup down to 3 automated SQL scripts",
+              id: "Memangkas 20+ spreadsheet KPI menjadi 3 skrip SQL otomatis" },
+  },
+  {
+    icon: "strategy",
+    title: { en: "Business Strategy", id: "Strategi Bisnis" },
+    desc: {
+      en: "I structure ambiguous problems with McKinsey-style frameworks, read partner financials, and back recommendations with evidence and testing.",
+      id: "Saya menyusun masalah yang ambigu dengan kerangka ala McKinsey, membaca laporan keuangan mitra, dan mendukung rekomendasi dengan bukti serta pengujian.",
+    },
+    tools: ["MECE", "Issue Trees", "Porter's Five Forces", "SWOT", "Financial Analysis"],
+    metric: { en: "A/B testing that lifted approval rate +30% and disbursement +25%",
+              id: "Pengujian A/B yang menaikkan tingkat persetujuan +30% dan pencairan +25%" },
+  },
+  {
+    icon: "gears",
+    title: { en: "Operational Excellence", id: "Keunggulan Operasional" },
+    desc: {
+      en: "I apply Lean Six Sigma to make processes faster, cleaner, and compliant — from root-cause analysis to SOPs and quality assurance.",
+      id: "Saya menerapkan Lean Six Sigma agar proses lebih cepat, bersih, dan patuh — dari analisis akar masalah hingga SOP dan penjaminan mutu.",
+    },
+    tools: ["Lean Six Sigma", "PDCA", "SIPOC", "5 Why", "Process Mapping"],
+    metric: { en: "Reduced SLA from 14+ days to 2 days and input errors by ~95%",
+              id: "Menurunkan SLA dari 14+ hari menjadi 2 hari dan kesalahan input ~95%" },
+  },
+  {
+    icon: "flag",
+    title: { en: "Project Management", id: "Manajemen Proyek" },
+    desc: {
+      en: "I run product development end-to-end — BRDs, PRDs, RACI, and timelines — aligning IT, Finance, Legal, and Business to ship on time.",
+      id: "Saya menjalankan pengembangan produk secara menyeluruh — BRD, PRD, RACI, dan lini masa — menyelaraskan IT, Keuangan, Legal, dan Bisnis agar rilis tepat waktu.",
+    },
+    tools: ["BRD / PRD", "RACI", "Jira", "Asana", "Google PM Cert"],
+    metric: { en: "Launched 3 products and an Instant Approval flow at Koinworks",
+              id: "Meluncurkan 3 produk dan alur Instant Approval di Koinworks" },
+  },
+  {
+    icon: "bolt",
+    title: { en: "Automation", id: "Otomatisasi" },
+    desc: {
+      en: "When systems aren't ready, I build them — custom tools with Apps Script and end-to-end workflows with n8n that remove manual, error-prone steps.",
+      id: "Ketika sistem belum siap, saya membangunnya — alat khusus dengan Apps Script dan alur kerja menyeluruh dengan n8n yang menghilangkan langkah manual yang rawan kesalahan.",
+    },
+    tools: ["n8n", "Google Apps Script", "JavaScript", "APIs", "Google Workspace"],
+    metric: { en: "20+ apps built; contract generation from 5 min to 10 sec",
+              id: "20+ aplikasi dibangun; pembuatan kontrak dari 5 menit menjadi 10 detik" },
+  },
+];
+
+/* Featured (professional) case studies */
+const PROJECTS = [
+  {
+    title: { en: "Partnership Lending Dashboard", id: "Dashboard Partnership Lending" },
+    tags: ["Data Analysis", "SQL"],
+    context: { en: "Fintech · monitoring the Partnership Lending division (disbursement, repayment, outstanding).",
+               id: "Fintech · memantau divisi Partnership Lending (pencairan, pembayaran, outstanding)." },
+    problem: { en: "The team monitored performance in spreadsheets that grew heavy, slow, and hard to access as data scaled.",
+               id: "Tim memantau kinerja lewat spreadsheet yang menjadi berat, lambat, dan sulit diakses seiring bertambahnya data." },
+    approach: { en: "Reviewed the source tables in Superset, then wrote the SQL (SQL Lab) that powers a live dashboard.",
+                id: "Meninjau tabel sumber di Superset, lalu menulis SQL (SQL Lab) yang menggerakkan dashboard langsung." },
+    result: { en: "A shared dashboard now used by the PL team and other teams that need the same data.",
+              id: "Dashboard bersama yang kini dipakai tim PL dan tim lain yang membutuhkan data yang sama." },
+    tools: ["Apache Superset", "SQL"],
+  },
+  {
+    title: { en: "Workflow Automation", id: "Otomatisasi Alur Kerja" },
+    tags: ["Automation"],
+    context: { en: "Fintech · removing manual touch so the team can focus on higher-impact work.",
+               id: "Fintech · menghilangkan sentuhan manual agar tim fokus pada pekerjaan berdampak tinggi." },
+    problem: { en: "Reports, approval emails, customer updates, and task creation were all manual — slow and error-prone.",
+               id: "Laporan, email persetujuan, pembaruan pelanggan, dan pembuatan tugas semuanya manual — lambat dan rawan kesalahan." },
+    approach: { en: "Read the SOPs, interviewed each process owner about their pain points, then automated the flows with n8n and supporting scripts.",
+                id: "Membaca SOP, mewawancarai setiap pemilik proses tentang kendalanya, lalu mengotomatiskan alur dengan n8n dan skrip pendukung." },
+    result: { en: "Less manual work, fewer errors, and cleaner processes across the board.",
+              id: "Lebih sedikit pekerjaan manual, lebih sedikit kesalahan, dan proses yang lebih bersih secara menyeluruh." },
+    tools: ["n8n", "Google Apps Script", "Google Workspace", "Asana", "Slack", "WhatsApp API"],
+  },
+  {
+    title: { en: "Partnership Lending System", id: "Sistem Partnership Lending" },
+    tags: ["Project Management"],
+    context: { en: "Fintech · owning the BRD and timeline to move a manual process into a compliant system.",
+               id: "Fintech · memimpin BRD dan lini masa untuk memindahkan proses manual ke sistem yang patuh." },
+    problem: { en: "Parts of the lending process ran manually and off-system, which fintech regulation does not allow.",
+               id: "Sebagian proses lending berjalan manual dan di luar sistem, yang tidak diizinkan regulasi fintech." },
+    approach: { en: "Authored the BRD and timeline, defined business expectations and success criteria, and ran UAT to verify requirements.",
+                id: "Menyusun BRD dan lini masa, mendefinisikan ekspektasi bisnis dan kriteria sukses, serta menjalankan UAT untuk memverifikasi kebutuhan." },
+    result: { en: "A system that can receive applications and disburse loans, fully on-system.",
+              id: "Sistem yang dapat menerima aplikasi dan mencairkan pinjaman, sepenuhnya dalam sistem." },
+    tools: ["Google Sheets", "Jira", "Slack"],
+  },
+];
+
+/* Personal Projects — placeholders (content coming after review) */
+const LAB = [
+  { icon: "chart", title: { en: "Data Analysis (Python)", id: "Analisis Data (Python)" },
+    tags: ["EDA", "Regression", "Clustering", "ARIMA"],
+    note: { en: "Kaggle datasets: EDA, regression, clustering & forecasting with charts.",
+            id: "Dataset Kaggle: EDA, regresi, clustering & peramalan dengan grafik." } },
+  { icon: "bolt", title: { en: "Automation (n8n)", id: "Otomatisasi (n8n)" },
+    tags: ["Workflow", "APIs"],
+    note: { en: "An end-to-end n8n workflow — node graph and what it automates.",
+            id: "Alur kerja n8n menyeluruh — diagram node dan apa yang diotomatiskan." } },
+  { icon: "strategy", title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
+    tags: ["MECE", "Issue Tree"],
+    note: { en: "A business problem structured and solved with a McKinsey framework.",
+            id: "Masalah bisnis yang disusun dan dipecahkan dengan kerangka McKinsey." } },
+];
+
+/* Skills grid */
+const SKILLS = [
+  { category: { en: "Data & Analytics", id: "Data & Analitik" },
+    items: ["Python", "SQL", "Google Colab", "Jupyter Notebook", "Google Sheets", "Tableau", "Looker", "Apache Superset", "Metabase"] },
+  { category: { en: "Automation & Integration", id: "Otomatisasi & Integrasi" },
+    items: ["Google Apps Script", "n8n", "HTML", "CSS", "JavaScript"] },
+  { category: { en: "Project Management", id: "Manajemen Proyek" },
+    items: ["Asana", "Jira", "Spreadsheet", "BRD / PRD", "RACI"] },
+  { category: { en: "Business & Strategy", id: "Bisnis & Strategi" },
+    items: ["Financial Statement Analysis", "Business Planning", "Market Research", "MECE", "Issue Trees"] },
+  { category: { en: "Operational Excellence", id: "Keunggulan Operasional" },
+    items: ["Lean Six Sigma", "PDCA", "SIPOC", "5 Why", "SOP Development", "Process Mapping"] },
+  { category: { en: "Soft Skills", id: "Soft Skills" },
+    items: ["Cross-functional Leadership", "Stakeholder Management", "Data-Driven Decisions", "Root Cause Analysis", "Problem Solving"] },
+];
+
+/* Professional journey timeline (most recent first) */
+const TIMELINE = [
+  { type: "work", date: "Mar 2025 — Present",
+    role: { en: "Senior Process Improvement Analyst", id: "Senior Process Improvement Analyst" },
+    org: "Amartha · Fintech",
+    desc: { en: "Build improvement plans from performance data and customer feedback; design credit policies at 100% regulatory adherence; lead IT, Finance, Legal & Business on product launches.",
+            id: "Menyusun rencana perbaikan dari data kinerja dan umpan balik pelanggan; merancang kebijakan kredit dengan kepatuhan 100%; memimpin IT, Keuangan, Legal & Bisnis dalam peluncuran produk." } },
+  { type: "work", date: "Jan 2023 — Jan 2025",
+    role: { en: "Senior Process Improvement & QA", id: "Senior Process Improvement & QA" },
+    org: "Koinworks · Fintech / P2P Lending",
+    desc: { en: "Monitored KPIs and drove continuous improvement; led cross-functional root-cause analysis; built metrics-based reporting systems.",
+            id: "Memantau KPI dan mendorong perbaikan berkelanjutan; memimpin analisis akar masalah lintas fungsi; membangun sistem pelaporan berbasis metrik." } },
+  { type: "work", date: "Jan 2021 — Dec 2022",
+    role: { en: "Process Improvement & QA Officer", id: "Process Improvement & QA Officer" },
+    org: "Koinworks · Fintech / P2P Lending",
+    desc: { en: "Developed improvement initiatives and corrective-action strategies for operations; delivered data-driven insights and trend models.",
+            id: "Mengembangkan inisiatif perbaikan dan strategi tindakan korektif untuk operasional; memberikan wawasan berbasis data dan model tren." } },
+  { type: "edu", date: "2016 — 2018",
+    role: { en: "Master of Management", id: "Magister Manajemen" },
+    org: "Prasetiya Mulya University · GPA 3.38",
+    desc: { en: "Business management, strategy, and finance.",
+            id: "Manajemen bisnis, strategi, dan keuangan." } },
+  { type: "edu", date: "2010 — 2015",
+    role: { en: "Bachelor of Engineering", id: "Sarjana Teknik" },
+    org: "Catholic University of Atma Jaya · GPA 3.42",
+    desc: { en: "Engineering foundation prior to a career in process improvement.",
+            id: "Fondasi teknik sebelum berkarier di process improvement." } },
+  { type: "cert", date: "2022 · 2020",
+    role: { en: "Certifications", id: "Sertifikasi" },
+    org: "Google · Purwadhika",
+    desc: { en: "Google Project Management Certificate (2022) · Data Science Bootcamp (2020).",
+            id: "Sertifikat Google Project Management (2022) · Bootcamp Data Science (2020)." } },
+];
