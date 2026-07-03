@@ -12,6 +12,7 @@ const ICONS = {
   check:    '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>',
   alert:    '<svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.01"/></svg>',
   idea:     '<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a6 6 0 00-4-10z"/></svg>',
+  briefcase:'<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/></svg>',
   pin:      '<svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
   mail:     '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4"/></svg>',
@@ -84,14 +85,34 @@ function renderSkills() {
     </div>`).join("");
 }
 
-function renderTimeline() {
-  document.getElementById("timeline").innerHTML = TIMELINE.map(t => `
-    <div class="tl-item ${t.type} reveal">
+function jcard(t, cls) {
+  return `
+    <article class="jcard ${cls} reveal">
       <div class="tl-date">${t.date}</div>
-      <h3>${T(t.role)}</h3>
-      <div class="tl-org">${t.org}</div>
+      <h4>${T(t.role)}</h4>
+      <div class="jcard-org">${t.org}</div>
       <p>${T(t.desc)}</p>
+    </article>`;
+}
+function renderJourney() {
+  const by = (type) => TIMELINE.filter(t => t.type === type);
+  const accents = ["c-primary", "c-teal", "c-secondary", "c-tertiary"];
+
+  // Work: horizontal connected timeline, oldest → present (left to right)
+  document.getElementById("experience-row").innerHTML = [...by("work")].reverse().map((t, i) => `
+    <div class="htl-item ${i % 2 ? "down" : "up"} ${accents[i % accents.length]} reveal">
+      <div class="htl-content">
+        <div class="tl-date">${t.date}</div>
+        <h4>${T(t.role)}</h4>
+        <div class="tl-org">${t.org}</div>
+        <p>${T(t.desc)}</p>
+      </div>
+      <div class="htl-node">${ICONS.briefcase}</div>
     </div>`).join("");
+
+  // Education & Certifications: cards
+  document.getElementById("education-grid").innerHTML = by("edu").map(t => jcard(t, "edu")).join("");
+  document.getElementById("cert-grid").innerHTML = by("cert").map(t => jcard(t, "cert")).join("");
 }
 
 function renderStats() {
@@ -122,7 +143,7 @@ function renderAll() {
   renderProjects();
   renderLab();
   renderSkills();
-  renderTimeline();
+  renderJourney();
   applyI18n();      // includes keys inside freshly-rendered markup
   observeReveals();
 }
