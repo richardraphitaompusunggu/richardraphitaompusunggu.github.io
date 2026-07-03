@@ -124,38 +124,33 @@
 
 ---
 
-## 9. Featured Projects (3-5 examples)
+## 9. Featured Projects (3-5 examples) ✅
 
-⏳ _Placeholder — Richard will add project details later._
+> Professional case studies from real work. Companies are kept anonymous — industry + context is enough. Each tells a mini-story: Problem → Approach → Result.
 
-For each project, answer these questions. You don't need to name the company — industry + context is enough.
+### Project 1 — Partnership Lending Dashboard
+- **Industry/Context:** Financial services / fintech — a dashboard to monitor the Partnership Lending (PL) division's performance (disbursement, repayment, outstanding).
+- **The Problem:** The PL team monitored performance in spreadsheets. As the data grew, the spreadsheets became heavy, slow, and hard to access.
+- **Your Role & Approach:** I built the dashboard end-to-end — reviewed the available data and tables in Superset, then wrote the SQL queries (SQL Lab) that power the dashboard.
+- **Tools Used:** Apache Superset (SQL Lab), SQL
+- **Key Results:** A shared dashboard now used not only by the PL team but also by other teams that need the same information.
+- **Expertise Areas:** Data Analysis, SQL
 
-### Project 1
-- **Project Title:** _To be added_
-- **Industry/Context:** _To be added_
-- **The Problem:** _To be added_
-- **Your Role & Approach:** _To be added_
-- **Tools Used:** _To be added_
-- **Key Results:** _To be added_
-- **Expertise Areas:** _To be added_
+### Project 2 — Workflow Automation
+- **Industry/Context:** Financial services / fintech — automation to reduce human error and manual touch, freeing the team to spend time and energy on more impactful work.
+- **The Problem:** Many processes were still manual — generating reports, sending approval emails, informing customers about application status, creating Asana tasks, and more. These steps consumed time and increased human error.
+- **Your Role & Approach:** I built the automations. I read the SOPs, interviewed the PIC for each process, learned the pain points and how each task was done, then built the automation with n8n and supporting scripts and integrations.
+- **Tools Used:** n8n, Google Apps Script, Google Workspace (Sheets, Docs), Asana, Slack, WhatsApp API, JavaScript
+- **Key Results:** Less manual work, fewer errors, cleaner processes.
+- **Expertise Areas:** Automation, API Integration, JavaScript / Web Development
 
-### Project 2
-- **Project Title:** _To be added_
-- **Industry/Context:** _To be added_
-- **The Problem:** _To be added_
-- **Your Role & Approach:** _To be added_
-- **Tools Used:** _To be added_
-- **Key Results:** _To be added_
-- **Expertise Areas:** _To be added_
-
-### Project 3
-- **Project Title:** _To be added_
-- **Industry/Context:** _To be added_
-- **The Problem:** _To be added_
-- **Your Role & Approach:** _To be added_
-- **Tools Used:** _To be added_
-- **Key Results:** _To be added_
-- **Expertise Areas:** _To be added_
+### Project 3 — Partnership Lending System
+- **Industry/Context:** Financial services / fintech — authored the BRD and project timeline to deliver the feature on time and run the project smoothly.
+- **The Problem:** Parts of the partnership lending process were still done manually and off-system. Fintech regulation requires all processes to run in-system.
+- **Your Role & Approach:** I owned the BRD and timeline — defined the business expectations for the feature, the success criteria, and the UAT test cases, and verified that all tests met requirements.
+- **Tools Used:** Google Sheets, Jira, Slack
+- **Key Results:** A system that can receive applications and disburse loans.
+- **Expertise Areas:** Project Management
 
 ---
 
@@ -370,6 +365,7 @@ This section contains the raw domain context provided — used as a reference to
 > [!IMPORTANT]
 > **Remaining items to complete before building the website:**
 > 1. ✅ Add standout achievements with numbers for each expertise area (Sections 4–8) — *done*
-> 2. ⏳ Add 3-5 featured project case studies (Section 9)
-> 3. ⏳ Personal Projects (Section 9A): export chart images, add n8n workflow screenshot, write the business case, and add GitHub/Kaggle links
-> 4. ⏳ Add testimonials if available (Section 14)
+> 2. ✅ Add featured project case studies (Section 9) — *3 provided; a 4th–5th optional*
+> 3. ✅ Professional photo provided — `DOCS/picture.JPG`
+> 4. ⏳ Personal Projects (Section 9A): export chart images, add n8n workflow screenshot, write the business case, and add GitHub/Kaggle links
+> 5. ⏳ Add testimonials if available (Section 14)

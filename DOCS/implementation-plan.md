@@ -42,11 +42,11 @@ The website will be a single-page design with smooth scroll navigation — ideal
 **Purpose:** Hook the visitor in 3 seconds. Establish who you are and what you do.
 
 **Content needed from you:**
-- [ ] Your full name
-- [ ] A professional headline (e.g., *"Turning Data Into Decisions, Strategy Into Execution"*)
-- [ ] A short tagline — 1-2 sentences about what you do (e.g., *"I help organizations unlock growth through data-driven strategy, streamlined operations, and intelligent automation."*)
-- [ ] A professional photo or avatar (optional but strongly recommended)
-- [ ] LinkedIn profile URL
+- [x] Your full name
+- [x] A professional headline — *"Turning Data Into Decisions, Processes Into Performance"*
+- [x] A short tagline (see About Me §2)
+- [x] A professional photo — `DOCS/picture.JPG` (optimize/convert to WebP before use)
+- [x] LinkedIn profile URL
 
 **Design approach:**
 - Full-viewport hero with animated gradient background
@@ -118,14 +118,13 @@ Each expertise area will have its own card with an icon, description, and key hi
 > [!TIP]
 > Aim for **3–5 projects** that span your expertise areas. Each project should tell a mini-story: Problem → Approach → Result.
 
-**For each project, provide:**
-- [ ] Project title
-- [ ] Context (company type/industry — you don't need to name the company)
-- [ ] The problem or challenge
-- [ ] Your role and approach
-- [ ] Tools & methods used
-- [ ] Key results with metrics (e.g., *"Increased revenue by 15%"*, *"Reduced processing time from 3 days to 2 hours"*)
-- [ ] Which expertise area(s) it demonstrates
+**Status:** ✅ 3 case studies provided in About Me §9 — a 4th–5th are optional:
+1. **Partnership Lending Dashboard** — Superset/SQL dashboard replacing heavy spreadsheets (Data Analysis, SQL)
+2. **Workflow Automation** — n8n + Apps Script automations across reports, emails, Asana, Slack, WhatsApp (Automation)
+3. **Partnership Lending System** — BRD, timeline, and UAT for moving a manual process in-system (Project Management)
+
+> [!NOTE]
+> These case studies describe outcomes qualitatively (cleaner process, shared dashboard, on-system loans). Where Richard can attach a number later (e.g., hours saved, error reduction), fold it in to strengthen credibility.
 
 **Design approach:**
 - Card grid with category filter tags (Data Analysis, Strategy, etc.)

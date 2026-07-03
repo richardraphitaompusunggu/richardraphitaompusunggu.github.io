@@ -2,7 +2,7 @@
 # Portfolio Website — Richard Raphita Ompusunggu
 
 No.: 001/BRD/PERSONAL/PORTFOLIO/07/2026   Date: 01 July 2026
-Version: 1.3   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
+Version: 1.4   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
 
 ---
 
@@ -16,6 +16,7 @@ Version: 1.3   Department: Personal Project   Prepared by: Richard Raphita Ompus
 | 1.1 | 01 July 2026 | Richard Raphita Ompusunggu | Added Non-Functional Requirements (§6.5); new functional reqs R-SITE-13–16 (Resume download, Analytics, Favicon/OG/404, Contact-method constraint); Open Decisions log (§9.5); resolved contact-form vs. no-backend conflict; added accessibility/spam/analytics risks and new dependencies |
 | 1.2 | 01 July 2026 | Richard Raphita Ompusunggu | Achievement metrics for all 5 expertise areas received (about-me §4–8); updated dependency status, assumptions, roadmap, and next steps accordingly; added Superset/Metabase/Jupyter to analytics tooling |
 | 1.3 | 01 July 2026 | Richard Raphita Ompusunggu | Added a 9th section — Personal Projects / Skills Showcase (R-SITE-17) for self-initiated Python/Kaggle, n8n, and McKinsey business-case work; updated section counts (8→9) and dependencies |
+| 1.4 | 01 July 2026 | Richard Raphita Ompusunggu | 3 professional case studies received (about-me §9) and professional photo provided (`DOCS/picture.JPG`); updated R-SITE-01/04, assumptions, dependencies, risks, critical path, and next steps; Personal Projects visuals now the critical-path content |
 
 ### Related Documents
 - [Implementation Plan](./implementation-plan.md) — Content & deployment strategy
@@ -159,7 +160,7 @@ Business rules:
 - Headline: "Turning Data Into Decisions, Processes Into Performance"
 - Tagline: "I help organizations improve operational performance through data-driven analysis, structured problem-solving, and intelligent automation — turning messy processes into scalable, efficient systems."
 - CTA buttons: "View My Work" (scrolls to projects) + "Connect on LinkedIn" (opens LinkedIn profile)
-- Professional photo displayed prominently
+- Professional photo displayed prominently (provided: `DOCS/picture.JPG` — optimize/convert to WebP and size appropriately per NFR-01 before use)
 - Full-viewport height with animated gradient background
 
 ### R-SITE-02 — About Me Section
@@ -186,7 +187,8 @@ Business rules:
 - Card grid layout with category filter tags
 - Each card: title, expertise tags, brief summary
 - Click to expand for full case study (Problem → Approach → Result)
-- *(Content pending — placeholder structure required)*
+- 3 case studies provided (about-me §9): Partnership Lending Dashboard, Workflow Automation, Partnership Lending System; a 4th–5th are optional
+- Company names anonymized ("Financial services / fintech") per Richard's preference
 
 ### R-SITE-17 — Personal Projects / Skills Showcase
 Priority: P1
@@ -368,8 +370,8 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 ## §8 Assumptions & Dependencies
 
 ### Assumptions
-- Richard will provide a professional headshot photo for the hero section
-- Achievement metrics for all 5 expertise areas are provided (about-me §4–8); project case studies will be added after initial deployment (placeholders acceptable for v1.0)
+- Professional photo provided (`DOCS/picture.JPG`) for the hero section
+- Achievement metrics (about-me §4–8) and 3 professional case studies (about-me §9) are provided; Personal Projects assets (§9A) and testimonials remain pending (placeholders acceptable for v1.0)
 - The website will be a static site — no server-side processing needed
 - Bilingual content translations will be reviewed by Richard for accuracy
 
@@ -377,9 +379,9 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 
 | Dependency | Owner | Status |
 |---|---|---|
-| Professional photo | Richard | Pending |
+| Professional photo | Richard | ✅ Provided (`DOCS/picture.JPG`) |
 | Achievement metrics (Sections 4–8) | Richard | ✅ Provided (about-me §4–8) |
-| Project case studies (3-5) | Richard | Pending |
+| Project case studies (3-5) | Richard | ✅ 3 provided (about-me §9); 4th–5th optional |
 | Testimonials (2-3 quotes) | Richard | Pending |
 | GitHub account setup | Richard | [Confirmed] |
 | Bahasa Indonesia translations | Richard | Pending |
@@ -392,7 +394,7 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 | Notebook/repo links (GitHub / Kaggle) for projects | Richard | Pending |
 
 ### Critical-Path Dependency
-**Professional photo** — needed for the hero section. The site can launch without it (using a typography-focused hero), but it significantly improves first impressions.
+**Personal Projects visuals (§9A)** — chart images, the n8n workflow screenshot, and the business-case diagram are now the main content gating a fully complete v1.0. The site can launch with placeholder cards for this section and have visuals added iteratively. *(Previous critical path — the professional photo — is now resolved: `DOCS/picture.JPG`.)*
 
 ---
 
@@ -401,7 +403,7 @@ Functional requirements describe *what* the site does; NFRs describe *how well* 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
 | Content placeholders remain unfilled long-term | Medium | High — reduces credibility | Set a 2-week deadline to complete all placeholder content after initial deployment |
-| Photo not provided | Low | Medium — weaker hero section | Design a strong typography-based fallback that still looks premium |
+| ~~Photo not provided~~ (resolved) | — | — | ✅ Photo provided (`DOCS/picture.JPG`) — keep a typography-based fallback in case a higher-res version is preferred later |
 | Bilingual content has translation errors | Medium | Medium — unprofessional impression | Richard reviews all ID translations before publish |
 | Site looks outdated over time | Low | Medium — hurts credibility | Use timeless design patterns; plan annual design refresh |
 | GitHub Pages goes down | Very Low | Low — temporary | GitHub has 99.9%+ uptime; no mitigation needed |
@@ -433,7 +435,9 @@ Decisions Richard needs to make before or during the build. Logging them here pr
 - ✅ Content strategy and planning
 - ✅ BRD creation
 - ✅ Achievement metrics collected for all 5 expertise areas
-- ⏳ Richard provides remaining content (project case studies, photo)
+- ✅ 3 professional case studies provided (about-me §9)
+- ✅ Professional photo provided (`DOCS/picture.JPG`)
+- ⏳ Richard provides remaining content (Personal Projects visuals §9A, testimonials)
 - 🔲 Design system (colors, typography, spacing tokens)
 - 🔲 HTML structure and CSS styling
 
@@ -455,10 +459,11 @@ Decisions Richard needs to make before or during the build. Logging them here pr
 - 🔲 Consider custom domain
 
 ### Immediate Next Steps
-1. Richard provides professional photo
+1. ✅ Professional photo provided (`DOCS/picture.JPG`)
 2. ✅ Standout achievements with numbers collected for each expertise area
-3. Richard writes 3-5 project case studies
-4. Begin website development once content is sufficiently complete (or launch with placeholders and iterate)
+3. ✅ 3 professional case studies provided (about-me §9)
+4. ⏳ Richard prepares Personal Projects visuals (§9A): Python chart exports, n8n workflow screenshot, business-case diagram, and notebook/repo links
+5. Begin website development — content is now sufficient to build with placeholders only for Personal Projects visuals and testimonials
 
 ---
 
