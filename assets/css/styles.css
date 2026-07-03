@@ -266,6 +266,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
 
 /* ---------- Skills ---------- */
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 32px; }
+.skill-group { text-align: center; }
 .skill-group h4 { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--c); margin-bottom: 18px; }
 .skill-group ul li { color: var(--text-2); font-size: 0.98rem; padding: 6px 0; transition: color .2s; }
 .skill-group ul li:hover { color: var(--primary); }
@@ -282,7 +283,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
 
 /* Experience: horizontal connected timeline (scrollbar hidden) */
 .htimeline {
-  display: flex; overflow-x: auto; position: relative; padding: 8px 0;
+  display: flex; justify-content: safe center; overflow-x: auto; position: relative; padding: 8px 0;
   scroll-snap-type: x proximity; scrollbar-width: none; -ms-overflow-style: none;
 }
 .htimeline::-webkit-scrollbar { display: none; }
