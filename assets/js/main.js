@@ -10,6 +10,8 @@ const ICONS = {
   flag:     '<svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
   bolt:     '<svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
   check:    '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>',
+  alert:    '<svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.01"/></svg>',
+  idea:     '<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10c.7.7 1 1.3 1 2h6c0-.7.3-1.3 1-2a6 6 0 00-4-10z"/></svg>',
   pin:      '<svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
   mail:     '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4"/></svg>',
@@ -23,54 +25,62 @@ const T = (obj) => (obj && obj[lang] !== undefined ? obj[lang] : obj && obj.en) 
 /* ---------- Render dynamic sections ---------- */
 function renderExpertise() {
   document.getElementById("expertise-grid").innerHTML = EXPERTISE.map((e, i) => `
-    <article class="exp-card reveal" data-delay="${i % 3 + 1}">
+    <article class="exp-card reveal ${e.accent}" data-delay="${i % 5 + 1}">
       <div class="exp-icon">${ICONS[e.icon]}</div>
       <h3>${T(e.title)}</h3>
       <p>${T(e.desc)}</p>
-      <div class="exp-tools">${e.tools.map(t => `<span>${t}</span>`).join("")}</div>
-      <div class="exp-metric">${ICONS.check}<span>${T(e.metric)}</span></div>
+      <div class="highlight">${T(e.highlight)}</div>
     </article>`).join("");
 }
 
 function renderProjects() {
   document.getElementById("projects-list").innerHTML = PROJECTS.map((p, i) => `
-    <article class="project reveal" data-delay="${i % 3 + 1}">
-      <div class="project-head" role="button" tabindex="0" aria-expanded="false">
-        <div>
-          <h3>${T(p.title)}</h3>
-          <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+    <article class="case reveal ${p.accent} ${i % 2 ? "reverse" : ""}">
+      <div class="case-text">
+        <h3>${T(p.title)}</h3>
+        <p class="case-context">${T(p.context)}</p>
+        <div class="par problem">
+          <div class="par-icon">${ICONS.alert}</div>
+          <div><div class="k" data-i18n="projects.problem"></div><div class="v">${T(p.problem)}</div></div>
         </div>
-        <span class="project-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="par approach">
+          <div class="par-icon">${ICONS.idea}</div>
+          <div><div class="k" data-i18n="projects.approach"></div><div class="v">${T(p.approach)}</div></div>
+        </div>
+        <div class="par result">
+          <div class="par-icon">${ICONS.check}</div>
+          <div><div class="k" data-i18n="projects.result"></div><div class="v">${T(p.result)}</div></div>
+        </div>
       </div>
-      <div class="project-body">
-        <div class="project-body-inner">
-          <p class="v" style="margin-bottom:6px">${T(p.context)}</p>
-          <div class="pb-row"><span class="k" data-i18n="projects.problem"></span><span class="v">${T(p.problem)}</span></div>
-          <div class="pb-row"><span class="k" data-i18n="projects.approach"></span><span class="v">${T(p.approach)}</span></div>
-          <div class="pb-row result"><span class="k" data-i18n="projects.result"></span><span class="v">${T(p.result)}</span></div>
-          <div class="pb-row"><span class="k" data-i18n="projects.tools"></span><span class="pb-tools">${p.tools.map(t => `<span>${t}</span>`).join("")}</span></div>
-        </div>
+      <div class="case-visual">
+        <div class="cv-icon">${ICONS[p.icon]}</div>
+        <div class="cv-tags">${p.tags.map(t => `<span class="pill accent">${t}</span>`).join("")}</div>
+        <div class="cv-tools">${p.tools.map(t => `<span class="pill">${t}</span>`).join("")}</div>
       </div>
     </article>`).join("");
-  wireProjectAccordions();
 }
 
 function renderLab() {
   document.getElementById("lab-grid").innerHTML = LAB.map((l, i) => `
-    <article class="lab-card reveal" data-delay="${i % 3 + 1}">
-      <span class="lab-soon" data-i18n="lab.soon"></span>
-      <div class="exp-icon">${ICONS[l.icon]}</div>
-      <h3>${T(l.title)}</h3>
-      <p>${T(l.note)}</p>
-      <div class="project-tags">${l.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+    <article class="lab-card reveal ${l.accent}" data-delay="${i % 3 + 1}">
+      <div class="lab-head">
+        <span class="lab-soon" data-i18n="lab.soon"></span>
+        <div class="exp-icon">${ICONS[l.icon]}</div>
+      </div>
+      <div class="lab-body">
+        <h3>${T(l.title)}</h3>
+        <p>${T(l.note)}</p>
+        <div class="lab-tags">${l.tags.map(t => `<span class="pill accent">${t}</span>`).join("")}</div>
+      </div>
     </article>`).join("");
 }
 
 function renderSkills() {
+  const accents = ["c-primary", "c-secondary", "c-teal", "c-tertiary", "c-primary", "c-secondary"];
   document.getElementById("skills-grid").innerHTML = SKILLS.map((s, i) => `
-    <div class="skill-group reveal" data-delay="${i % 3 + 1}">
-      <h3>${T(s.category)}</h3>
-      <div class="skill-tags">${s.items.map(t => `<span>${t}</span>`).join("")}</div>
+    <div class="skill-group reveal ${accents[i % accents.length]}" data-delay="${i % 3 + 1}">
+      <h4>${T(s.category)}</h4>
+      <ul>${s.items.map(t => `<li>${t}</li>`).join("")}</ul>
     </div>`).join("");
 }
 
@@ -87,7 +97,7 @@ function renderTimeline() {
 function renderStats() {
   document.getElementById("stats").innerHTML = STATS.map(s => `
     <div class="stat reveal">
-      <div class="num" data-count="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
+      <div class="num ${s.color}" data-count="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
       <div class="lbl">${T(s.label)}</div>
     </div>`).join("");
 }
@@ -115,23 +125,6 @@ function renderAll() {
   renderTimeline();
   applyI18n();      // includes keys inside freshly-rendered markup
   observeReveals();
-}
-
-/* ---------- Project accordions ---------- */
-function wireProjectAccordions() {
-  document.querySelectorAll(".project-head").forEach(head => {
-    const toggle = () => {
-      const card = head.closest(".project");
-      const body = card.querySelector(".project-body");
-      const open = card.classList.toggle("open");
-      head.setAttribute("aria-expanded", open);
-      body.style.maxHeight = open ? body.scrollHeight + "px" : 0;
-    };
-    head.addEventListener("click", toggle);
-    head.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
-    });
-  });
 }
 
 /* ---------- Scroll reveal ---------- */

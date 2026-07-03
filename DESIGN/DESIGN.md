@@ -119,6 +119,8 @@ spacing:
   stack-lg: 32px
 ---
 
+> **Status:** This is the adopted design system (v1.6). The live site (`index.html` + `assets/`) implements these tokens in vanilla CSS — the Tailwind `code.html` in this folder is the reference mockup only. Note: the site uses the actual token values below (surface `#041428`, primary `#b1c5ff`, secondary `#f2be69`, teal `#2DD4BF`), which differ from the rounded `#0A1A2F / #3E7BFA` values described in the prose sections; the tokens win.
+
 ## Brand & Style
 
 This design system is engineered for a **Senior Process Improvement Analyst**, embodying an "Executive Precision" aesthetic. The brand personality is authoritative, data-driven, and meticulously organized, reflecting the high-stakes environment of fintech and operational strategy. 

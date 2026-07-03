@@ -217,9 +217,9 @@ Each expertise area will have its own card with an icon, description, and key hi
 
 | Aspect | Approach |
 |---|---|
-| **Style** | Modern, professional, premium navy-blue theme with accent gradients |
-| **Typography** | Outfit (headings) + Inter (body) from Google Fonts |
-| **Colors** | Deep navy-blue base (`#0A1A2F` / `#0F2440`) · professional-blue primary accent (`#3E7BFA`, light `#6FA0FF`) · subtle warm-gold highlight for metrics (`#E4B15E`) · text `#EAF1FA` / muted `#9DB2CC`. Navy + blue + gold is a classic, finance-appropriate, professional pairing. |
+| **Style** | "Executive Precision" — corporate/modern, minimalist, premium dark navy (see `DESIGN/DESIGN.md`) |
+| **Typography** | Hanken Grotesk (headlines) + Inter (body) + JetBrains Mono (labels/stats) |
+| **Colors** | Surface `#041428` · elevated `#14263F` · primary light-blue `#b1c5ff` · secondary gold `#f2be69` · data-teal `#2DD4BF` · tertiary `#ffb68c` · text `#F8FAFC` / muted `#94A3B8`. Implemented as vanilla CSS custom properties in `assets/css/styles.css`. |
 | **Animations** | Smooth scroll reveals, hover effects, number counters |
 | **Responsiveness** | Fully mobile-responsive (recruiters often check on phones) |
 | **Performance** | Lightweight, fast-loading single page |

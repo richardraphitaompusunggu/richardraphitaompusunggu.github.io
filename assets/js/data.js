@@ -27,6 +27,10 @@ const I18N = {
   "hero.role":        { en: "Senior Process Improvement Analyst", id: "Senior Process Improvement Analyst" },
   "hero.headline":    { en: "Turning Data Into Decisions, Processes Into Performance",
                         id: "Mengubah Data Menjadi Keputusan, Proses Menjadi Kinerja" },
+  "hero.h1_a":        { en: "Turning Data Into ",   id: "Mengubah Data Menjadi " },
+  "hero.h1_blue":     { en: "Decisions",            id: "Keputusan" },
+  "hero.h1_b":        { en: ", Processes Into ",    id: ", Proses Menjadi " },
+  "hero.h1_gold":     { en: "Performance",          id: "Kinerja" },
   "hero.tagline":     { en: "I help organizations improve operational performance through data-driven analysis, structured problem-solving, and intelligent automation — turning messy processes into scalable, efficient systems.",
                         id: "Saya membantu organisasi meningkatkan kinerja operasional melalui analisis berbasis data, pemecahan masalah yang terstruktur, dan otomatisasi cerdas — mengubah proses yang berantakan menjadi sistem yang efisien dan terukur." },
   "hero.cta_work":    { en: "View My Work",       id: "Lihat Karya Saya" },
@@ -92,66 +96,71 @@ const I18N = {
 
 /* Animated stat counters in the About section */
 const STATS = [
-  { value: 6,  suffix: "",  label: { en: "Years of experience",  id: "Tahun pengalaman" } },
-  { value: 5,  suffix: "",  label: { en: "Expertise areas",      id: "Area keahlian" } },
-  { value: 3,  suffix: "",  label: { en: "Products launched",    id: "Produk diluncurkan" } },
-  { value: 20, suffix: "+", label: { en: "Automations built",    id: "Otomatisasi dibangun" } },
+  { value: 6,  suffix: "",  color: "c-primary",   label: { en: "Years of experience",  id: "Tahun pengalaman" } },
+  { value: 5,  suffix: "",  color: "c-secondary", label: { en: "Expertise areas",      id: "Area keahlian" } },
+  { value: 3,  suffix: "",  color: "c-teal",      label: { en: "Products launched",    id: "Produk diluncurkan" } },
+  { value: 20, suffix: "+", color: "c-tertiary",  label: { en: "Automations built",    id: "Otomatisasi dibangun" } },
 ];
 
 /* Core expertise cards */
 const EXPERTISE = [
   {
-    icon: "chart",
+    icon: "chart", accent: "c-primary",
     title: { en: "Data Analysis", id: "Analisis Data" },
     desc: {
       en: "I turn messy, raw data into decisions — cleaning, extracting, and modelling it into dashboards and KPI trackers that stakeholders actually use.",
       id: "Saya mengubah data mentah yang berantakan menjadi keputusan — membersihkan, mengekstrak, dan memodelkannya menjadi dashboard serta pelacak KPI yang benar-benar digunakan pemangku kepentingan.",
     },
     tools: ["SQL", "Python", "Superset", "Metabase", "Tableau", "Looker"],
+    highlight: { en: "20+ sheets → 3 SQL scripts", id: "20+ sheet → 3 skrip SQL" },
     metric: { en: "Cut a 20+ spreadsheet KPI setup down to 3 automated SQL scripts",
               id: "Memangkas 20+ spreadsheet KPI menjadi 3 skrip SQL otomatis" },
   },
   {
-    icon: "strategy",
+    icon: "strategy", accent: "c-secondary",
     title: { en: "Business Strategy", id: "Strategi Bisnis" },
     desc: {
       en: "I structure ambiguous problems with McKinsey-style frameworks, read partner financials, and back recommendations with evidence and testing.",
       id: "Saya menyusun masalah yang ambigu dengan kerangka ala McKinsey, membaca laporan keuangan mitra, dan mendukung rekomendasi dengan bukti serta pengujian.",
     },
     tools: ["MECE", "Issue Trees", "Porter's Five Forces", "SWOT", "Financial Analysis"],
+    highlight: { en: "+30% approval rate", id: "+30% tingkat approval" },
     metric: { en: "A/B testing that lifted approval rate +30% and disbursement +25%",
               id: "Pengujian A/B yang menaikkan tingkat persetujuan +30% dan pencairan +25%" },
   },
   {
-    icon: "gears",
+    icon: "gears", accent: "c-teal",
     title: { en: "Operational Excellence", id: "Keunggulan Operasional" },
     desc: {
       en: "I apply Lean Six Sigma to make processes faster, cleaner, and compliant — from root-cause analysis to SOPs and quality assurance.",
       id: "Saya menerapkan Lean Six Sigma agar proses lebih cepat, bersih, dan patuh — dari analisis akar masalah hingga SOP dan penjaminan mutu.",
     },
     tools: ["Lean Six Sigma", "PDCA", "SIPOC", "5 Why", "Process Mapping"],
+    highlight: { en: "SLA 14 days → 2 days", id: "SLA 14 hari → 2 hari" },
     metric: { en: "Reduced SLA from 14+ days to 2 days and input errors by ~95%",
               id: "Menurunkan SLA dari 14+ hari menjadi 2 hari dan kesalahan input ~95%" },
   },
   {
-    icon: "flag",
+    icon: "flag", accent: "c-tertiary",
     title: { en: "Project Management", id: "Manajemen Proyek" },
     desc: {
       en: "I run product development end-to-end — BRDs, PRDs, RACI, and timelines — aligning IT, Finance, Legal, and Business to ship on time.",
       id: "Saya menjalankan pengembangan produk secara menyeluruh — BRD, PRD, RACI, dan lini masa — menyelaraskan IT, Keuangan, Legal, dan Bisnis agar rilis tepat waktu.",
     },
     tools: ["BRD / PRD", "RACI", "Jira", "Asana", "Google PM Cert"],
+    highlight: { en: "3 products launched", id: "3 produk diluncurkan" },
     metric: { en: "Launched 3 products and an Instant Approval flow at Koinworks",
               id: "Meluncurkan 3 produk dan alur Instant Approval di Koinworks" },
   },
   {
-    icon: "bolt",
+    icon: "bolt", accent: "c-primary",
     title: { en: "Automation", id: "Otomatisasi" },
     desc: {
       en: "When systems aren't ready, I build them — custom tools with Apps Script and end-to-end workflows with n8n that remove manual, error-prone steps.",
       id: "Ketika sistem belum siap, saya membangunnya — alat khusus dengan Apps Script dan alur kerja menyeluruh dengan n8n yang menghilangkan langkah manual yang rawan kesalahan.",
     },
     tools: ["n8n", "Google Apps Script", "JavaScript", "APIs", "Google Workspace"],
+    highlight: { en: "Contract: 5 min → 10 sec", id: "Kontrak: 5 mnt → 10 dtk" },
     metric: { en: "20+ apps built; contract generation from 5 min to 10 sec",
               id: "20+ aplikasi dibangun; pembuatan kontrak dari 5 menit menjadi 10 detik" },
   },
@@ -160,6 +169,7 @@ const EXPERTISE = [
 /* Featured (professional) case studies */
 const PROJECTS = [
   {
+    icon: "chart", accent: "c-primary",
     title: { en: "Partnership Lending Dashboard", id: "Dashboard Partnership Lending" },
     tags: ["Data Analysis", "SQL"],
     context: { en: "Fintech · monitoring the Partnership Lending division (disbursement, repayment, outstanding).",
@@ -173,6 +183,7 @@ const PROJECTS = [
     tools: ["Apache Superset", "SQL"],
   },
   {
+    icon: "bolt", accent: "c-secondary",
     title: { en: "Workflow Automation", id: "Otomatisasi Alur Kerja" },
     tags: ["Automation"],
     context: { en: "Fintech · removing manual touch so the team can focus on higher-impact work.",
@@ -186,6 +197,7 @@ const PROJECTS = [
     tools: ["n8n", "Google Apps Script", "Google Workspace", "Asana", "Slack", "WhatsApp API"],
   },
   {
+    icon: "flag", accent: "c-tertiary",
     title: { en: "Partnership Lending System", id: "Sistem Partnership Lending" },
     tags: ["Project Management"],
     context: { en: "Fintech · owning the BRD and timeline to move a manual process into a compliant system.",
@@ -202,15 +214,15 @@ const PROJECTS = [
 
 /* Personal Projects — placeholders (content coming after review) */
 const LAB = [
-  { icon: "chart", title: { en: "Data Analysis (Python)", id: "Analisis Data (Python)" },
+  { icon: "chart", accent: "c-primary", title: { en: "Data Analysis (Python)", id: "Analisis Data (Python)" },
     tags: ["EDA", "Regression", "Clustering", "ARIMA"],
     note: { en: "Kaggle datasets: EDA, regression, clustering & forecasting with charts.",
             id: "Dataset Kaggle: EDA, regresi, clustering & peramalan dengan grafik." } },
-  { icon: "bolt", title: { en: "Automation (n8n)", id: "Otomatisasi (n8n)" },
+  { icon: "bolt", accent: "c-secondary", title: { en: "Automation (n8n)", id: "Otomatisasi (n8n)" },
     tags: ["Workflow", "APIs"],
     note: { en: "An end-to-end n8n workflow — node graph and what it automates.",
             id: "Alur kerja n8n menyeluruh — diagram node dan apa yang diotomatiskan." } },
-  { icon: "strategy", title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
+  { icon: "strategy", accent: "c-teal", title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
     tags: ["MECE", "Issue Tree"],
     note: { en: "A business problem structured and solved with a McKinsey framework.",
             id: "Masalah bisnis yang disusun dan dipecahkan dengan kerangka McKinsey." } },
