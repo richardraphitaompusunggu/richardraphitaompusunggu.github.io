@@ -67,6 +67,14 @@ const I18N = {
   "lab.subtitle":     { en: "Self-initiated projects using public data and personal builds. Visuals and full write-ups are on the way.",
                         id: "Proyek atas inisiatif sendiri menggunakan data publik dan hasil bangunan pribadi. Visual dan penjelasan lengkap akan segera hadir." },
   "lab.soon":         { en: "Coming soon",        id: "Segera hadir" },
+  "lab.explore":      { en: "Explore",            id: "Jelajahi" },
+  "lab.back":         { en: "Back to portfolio",  id: "Kembali ke portofolio" },
+  "lab.view_github":  { en: "View on GitHub",     id: "Lihat di GitHub" },
+  "lab.task":         { en: "Task",               id: "Tugas" },
+  "lab.empty":        { en: "Cases coming soon — notebooks will be linked here.",
+                        id: "Studi kasus segera hadir — notebook akan ditautkan di sini." },
+  "lab.media_soon":   { en: "Chart preview coming soon",
+                        id: "Pratinjau grafik segera hadir" },
 
   "skills.eyebrow":   { en: "Skills & Tools",     id: "Keahlian & Alat" },
   "skills.title":     { en: "The toolkit behind the work",
@@ -215,20 +223,59 @@ const PROJECTS = [
   },
 ];
 
-/* Personal Projects — placeholders (content coming after review) */
+/* Personal Projects.
+   Each entry is one discipline. The index card links to lab.html?topic=<key>,
+   which lists that discipline's `cases`. Each case's title opens the RENDERED
+   notebook on GitHub (GitHub shows .ipynb charts inline).
+   TODO for each case:
+     - url: point to the rendered notebook, e.g.
+         https://github.com/richardraphitaompusunggu/<repo>/blob/main/<notebook>.ipynb
+       (or an nbviewer link: https://nbviewer.org/github/<user>/<repo>/blob/main/<notebook>.ipynb)
+     - image: set to an exported chart in assets/img/lab/ (WebP), or leave null. */
 const LAB = [
-  { icon: "chart", accent: "c-primary", title: { en: "Data Analysis (Python)", id: "Analisis Data (Python)" },
+  {
+    key: "data-analysis", icon: "chart", accent: "c-primary",
+    title: { en: "Data Analysis (Python)", id: "Analisis Data (Python)" },
     tags: ["EDA", "Regression", "Clustering", "ARIMA"],
     note: { en: "Kaggle datasets: EDA, regression, clustering & forecasting with charts.",
-            id: "Dataset Kaggle: EDA, regresi, clustering & peramalan dengan grafik." } },
-  { icon: "bolt", accent: "c-secondary", title: { en: "Automation (n8n)", id: "Otomatisasi (n8n)" },
+            id: "Dataset Kaggle: EDA, regresi, clustering & peramalan dengan grafik." },
+    intro: { en: "My machine-learning portfolio, built with public data from Kaggle and other sources. It spans problems from different industries and a range of algorithmic approaches. Click any title to open the notebook on GitHub.",
+             id: "Portofolio machine learning saya, dibuat dengan data publik dari Kaggle dan sumber lain. Mencakup berbagai masalah dari beragam industri dan pendekatan algoritma. Klik judul mana pun untuk membuka notebook di GitHub." },
+    cases: [
+      { title: "Avocado Prices", url: "https://github.com/richardraphitaompusunggu",
+        tags: ["EDA", "ARIMA"], image: null,
+        desc: { en: "Exploratory Data Analysis and an ARIMA time-series forecast for avocado prices — used to plan where and when to buy at a better price and maximize profit.",
+                id: "Exploratory Data Analysis dan peramalan deret waktu ARIMA untuk harga alpukat — dipakai merencanakan di mana dan kapan membeli dengan harga lebih baik untuk memaksimalkan keuntungan." } },
+      { title: "Boston House Prices", url: "https://github.com/richardraphitaompusunggu",
+        tags: ["EDA", "Regression"], image: null,
+        desc: { en: "EDA and a regression model to estimate Boston house prices from the available variables — useful to judge whether a house is over- or under-valued.",
+                id: "EDA dan model regresi untuk memperkirakan harga rumah di Boston dari variabel yang tersedia — berguna menilai apakah rumah dinilai terlalu tinggi atau rendah." } },
+      { title: "Brazil E-commerce", url: "https://github.com/richardraphitaompusunggu",
+        tags: ["EDA", "Clustering", "ARIMA"], image: null,
+        desc: { en: "EDA plus clustering by region to see which regions have the highest payment and growth, and ARIMA forecasting to predict future orders and payment.",
+                id: "EDA plus clustering per wilayah untuk melihat wilayah dengan pembayaran dan pertumbuhan tertinggi, serta peramalan ARIMA untuk memprediksi pesanan dan pembayaran mendatang." } },
+    ],
+  },
+  {
+    key: "automation", icon: "bolt", accent: "c-secondary",
+    title: { en: "Automation (n8n)", id: "Otomatisasi (n8n)" },
     tags: ["Workflow", "APIs"],
-    note: { en: "An end-to-end n8n workflow — node graph and what it automates.",
-            id: "Alur kerja n8n menyeluruh — diagram node dan apa yang diotomatiskan." } },
-  { icon: "strategy", accent: "c-teal", title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
+    note: { en: "End-to-end n8n workflows — node graphs and what they automate.",
+            id: "Alur kerja n8n menyeluruh — diagram node dan apa yang diotomatiskan." },
+    intro: { en: "Automation builds using n8n and Google Apps Script — end-to-end workflows that remove manual, error-prone steps. Click any title to open the workflow or repo on GitHub.",
+             id: "Karya otomatisasi menggunakan n8n dan Google Apps Script — alur kerja menyeluruh yang menghilangkan langkah manual yang rawan kesalahan. Klik judul mana pun untuk membuka alur kerja atau repo di GitHub." },
+    cases: [],
+  },
+  {
+    key: "business", icon: "strategy", accent: "c-teal",
+    title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
     tags: ["MECE", "Issue Tree"],
-    note: { en: "A business problem structured and solved with a McKinsey framework.",
-            id: "Masalah bisnis yang disusun dan dipecahkan dengan kerangka McKinsey." } },
+    note: { en: "Business problems structured and solved with McKinsey frameworks.",
+            id: "Masalah bisnis yang disusun dan dipecahkan dengan kerangka McKinsey." },
+    intro: { en: "Business cases structured and solved with McKinsey-style frameworks (MECE, issue trees, hypothesis-driven analysis). Click any title to open the write-up on GitHub.",
+             id: "Studi kasus bisnis yang disusun dan dipecahkan dengan kerangka ala McKinsey (MECE, issue tree, analisis berbasis hipotesis). Klik judul mana pun untuk membuka penjelasan di GitHub." },
+    cases: [],
+  },
 ];
 
 /* Skills grid */

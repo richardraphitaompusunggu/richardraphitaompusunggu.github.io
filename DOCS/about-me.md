@@ -166,7 +166,7 @@
 - **Task / Type of Analysis:** e.g., EDA, Regression, Clustering, ARIMA
 - **Description:** what you did and what it demonstrates
 - **Visuals:** chart images / workflow screenshot / diagram (file names once exported)
-- **Link (optional):** GitHub repo / Kaggle notebook / n8n workflow
+- **Link:** the **rendered notebook on GitHub** (e.g., `.../blob/main/<notebook>.ipynb`, which shows charts inline) or an nbviewer URL — this is what the case title links to on the site
 
 ---
 

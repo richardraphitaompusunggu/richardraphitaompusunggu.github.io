@@ -2,7 +2,7 @@
 # Portfolio Website — Richard Raphita Ompusunggu
 
 No.: 001/BRD/PERSONAL/PORTFOLIO/07/2026   Date: 01 July 2026
-Version: 1.6   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
+Version: 1.7   Department: Personal Project   Prepared by: Richard Raphita Ompusunggu   Status: Draft
 
 ---
 
@@ -19,6 +19,7 @@ Version: 1.6   Department: Personal Project   Prepared by: Richard Raphita Ompus
 | 1.4 | 01 July 2026 | Richard Raphita Ompusunggu | 3 professional case studies received (about-me §9) and professional photo provided (`DOCS/picture.JPG`); updated R-SITE-01/04, assumptions, dependencies, risks, critical path, and next steps; Personal Projects visuals now the critical-path content |
 | 1.5 | 03 July 2026 | Richard Raphita Ompusunggu | Locked design system to navy-blue (D-08); decided placeholder-first launch for Personal Projects & Testimonials (D-09); initial website build (index.html + assets) — bilingual, responsive, 9 sections |
 | 1.6 | 03 July 2026 | Richard Raphita Ompusunggu | Adopted "Executive Precision" design system from `DESIGN/DESIGN.md` (updated D-08); restyled site — new palette/type, centered expertise cards, two-column case studies, column-based skills; content unchanged |
+| 1.7 | 06 July 2026 | Richard Raphita Ompusunggu | Personal Projects now open per-discipline detail pages (`lab.html?topic=`) listing cases; case titles link to rendered GitHub notebooks; horizontal work-experience timeline; misc layout centering |
 
 ### Related Documents
 - [Implementation Plan](./implementation-plan.md) — Content & deployment strategy
@@ -199,7 +200,8 @@ Business rules:
 - Purpose: prove technical ability **directly** using public/Kaggle data and personal builds — complements the anonymized professional case studies in R-SITE-04 (which prove *impact*)
 - Card/grid layout with filter tags by discipline: Data Analysis, Automation, Business Strategy, Process Improvement, Project Management
 - Each card shows: title, discipline tag(s), tools used, short description, and a visual (chart image, workflow screenshot, or diagram)
-- Click to expand for detail; where applicable, an outbound link to the full artifact ("View notebook on GitHub/Kaggle", "View n8n workflow", "Read the case")
+- Each discipline card on the home page links to a dedicated detail page (`lab.html?topic=<discipline>`) that lists that discipline's cases portfolio-style (title → tags → description → chart)
+- Each case title opens the **rendered notebook on GitHub** (inline charts) — or nbviewer — where the `.ipynb`/workflow/write-up lives
 - Example projects to feature:
   - **Data Analysis (Python):** Kaggle datasets showing EDA, regression (e.g., Boston House Prices), clustering, and time-series forecasting/ARIMA (e.g., Brazil E-commerce), with charts
   - **Automation (n8n):** an end-to-end workflow with a screenshot/diagram of the node graph and what it automates

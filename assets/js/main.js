@@ -62,18 +62,25 @@ function renderProjects() {
 }
 
 function renderLab() {
-  document.getElementById("lab-grid").innerHTML = LAB.map((l, i) => `
-    <article class="lab-card reveal ${l.accent}" data-delay="${i % 3 + 1}">
+  document.getElementById("lab-grid").innerHTML = LAB.map((l, i) => {
+    const count = (l.cases || []).length;
+    const badge = count
+      ? `${count} ${count === 1 ? "project" : "projects"}`
+      : I18N["lab.soon"][lang];
+    return `
+    <a class="lab-card reveal ${l.accent}" href="lab.html?topic=${l.key}" data-delay="${i % 3 + 1}">
       <div class="lab-head">
-        <span class="lab-soon" data-i18n="lab.soon"></span>
+        <span class="lab-soon">${badge}</span>
         <div class="exp-icon">${ICONS[l.icon]}</div>
       </div>
       <div class="lab-body">
         <h3>${T(l.title)}</h3>
         <p>${T(l.note)}</p>
         <div class="lab-tags">${l.tags.map(t => `<span class="pill accent">${t}</span>`).join("")}</div>
+        <span class="lab-cta"><span data-i18n="lab.explore"></span> →</span>
       </div>
-    </article>`).join("");
+    </a>`;
+  }).join("");
 }
 
 function renderSkills() {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Projects — Richard Raphita Ompusunggu</title>
+  <meta name="description" content="Personal project portfolio — hands-on data analysis, automation, and business-case work by Richard Raphita Ompusunggu." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Sub-nav ===== -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="brand">Richard R. Ompusunggu</a>
+      <div class="nav-right">
+        <a class="subnav-back" href="index.html#lab">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          <span data-i18n="lab.back"></span>
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="id">ID</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="lab-detail" id="lab-root">
+    <div class="container" id="lab-content"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <div class="brand-name">Richard Raphita Ompusunggu</div>
+        <div class="copy">© <span id="year"></span> · <span data-i18n="footer.rights"></span></div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#contact" data-i18n="nav.contact"></a>
+        <a href="index.html#lab" data-i18n="lab.back"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/lab.js"></script>
+</body>
+</html>
