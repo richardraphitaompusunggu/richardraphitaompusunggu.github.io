@@ -67,8 +67,11 @@ function renderLab() {
     const badge = count
       ? `${count} ${count === 1 ? "project" : "projects"}`
       : I18N["lab.soon"][lang];
+    // Coming-soon topics render as a plain, non-clickable card without the Explore link
+    const tag = count ? "a" : "div";
+    const href = count ? ` href="lab.html?topic=${l.key}"` : "";
     return `
-    <a class="lab-card reveal ${l.accent}" href="lab.html?topic=${l.key}" data-delay="${i % 3 + 1}">
+    <${tag} class="lab-card reveal ${l.accent}"${href} data-delay="${i % 3 + 1}">
       <div class="lab-head">
         <span class="lab-soon">${badge}</span>
         <div class="exp-icon">${ICONS[l.icon]}</div>
@@ -77,9 +80,9 @@ function renderLab() {
         <h3>${T(l.title)}</h3>
         <p>${T(l.note)}</p>
         <div class="lab-tags">${l.tags.map(t => `<span class="pill accent">${t}</span>`).join("")}</div>
-        <span class="lab-cta"><span data-i18n="lab.explore"></span> →</span>
+        ${count ? `<span class="lab-cta"><span data-i18n="lab.explore"></span> →</span>` : ""}
       </div>
-    </a>`;
+    </${tag}>`;
   }).join("");
 }
 

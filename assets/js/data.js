@@ -268,7 +268,7 @@ const LAB = [
   },
   {
     key: "business", icon: "strategy", accent: "c-teal",
-    title: { en: "Business Case (McKinsey)", id: "Studi Kasus Bisnis (McKinsey)" },
+    title: { en: "Business cases (McKinsey-style frameworks)", id: "Studi kasus bisnis (kerangka ala McKinsey)" },
     tags: ["MECE", "Issue Tree"],
     note: { en: "Business problems structured and solved with McKinsey frameworks.",
             id: "Masalah bisnis yang disusun dan dipecahkan dengan kerangka McKinsey." },
